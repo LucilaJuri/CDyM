@@ -45,7 +45,7 @@ int main(void) {
     while(1) {
         leer_pulsadores();
 
-        // Tarea Puerto D (Cada 100ms) -> 10 ticks de 10ms
+        // Puerto D (Cada 100ms)
         if (contA == 10) {
             ejecutar_secuencias_D();
             contA = 1;
@@ -53,7 +53,7 @@ int main(void) {
             contA++;
         }
 
-        // Tarea Neopixel (Cada 150ms) -> 15 ticks de 10ms
+        // Neopixel (Cada 150ms)
         if (contB == 15) {
 			ejecutar_secuencias_NEO();
             contB = 1;
@@ -66,21 +66,21 @@ int main(void) {
 }
 
 void configurar_io() {
-    // Puerto D: Todo salida (8 LEDs)
+    // Puerto D: Todo salida
     DDRD = 0xFF;
     
     // Puerto B: PB0 como salida (Neopixel)
     DDRB |= (1 << PB0);
 
-    // Puerto C: PC0 y PC1 como entradas (0)
+    // Puerto C: PC0 y PC1 como entradas (Pulsadores)
     DDRC &= ~((1 << PC0) | (1 << PC1));
 	
-    // Activar Pull-ups internos (Escribir 1 en el PORT siendo entrada)
+    // Activar Pull-ups internos 
     PORTC |= (1 << PC0) | (1 << PC1);
 }
 
 void leer_pulsadores() {
-    // --- LÓGICA PARA PC0 (LEDs del Puerto D) ---
+    // LÓGICA PARA PC0 ( LEDs del Puerto D)
     uint8_t estado_act_PC0 = (PINC & (1 << PINC0)) ? 1 : 0;
 
     if (estado_ant_PC0 == 0 && estado_act_PC0 == 1) {
@@ -94,7 +94,7 @@ void leer_pulsadores() {
     
     estado_ant_PC0 = estado_act_PC0;
     
-    // --- LÓGICA PARA PC1 (Neopixels) ---
+    // LÓGICA PARA PC1 (Neopixels)
     uint8_t estado_act_PC1 = (PINC & (1 << PINC1)) ? 1 : 0;
     
     if (estado_ant_PC1 == 0 && estado_act_PC1 == 1) {
@@ -130,17 +130,17 @@ void ejecutar_secuencias_D() {
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
 	
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
 	
-	// T0L: Mantenemos en BAJO 12 ciclos más 
+	// T0L: Mantenemos en BAJO 12 ciclos más (Total 14 ciclos = 875 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	"nop\n" "nop\n" "nop\n" "nop\n"
@@ -148,18 +148,19 @@ static inline void mandar_cero() {
 	);
 }
 
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
+static inline void __attribute__((always_inline)) mandar_uno() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
 	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
+	// T1H: Mantenemos en ALTO 11 ciclos más (Total 13 ciclos = 812 ns)
+	asm volatile (
+	"nop\n" "nop\n" "nop\n" "nop\n"
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	"nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
 	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
+	// T1L: Mantenemos en BAJO 5 ciclos más (Total 7 ciclos = 437 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	"nop\n"

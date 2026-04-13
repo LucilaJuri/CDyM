@@ -3,3784 +3,2179 @@ TP1_Grupo20.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         00000004  00800100  00001ad4  00001b68  2**0
+  0 .data         00000004  00800100  00000fc4  00001058  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  1 .text         00001ad4  00000000  00000000  00000094  2**1
+  1 .text         00000fc4  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .bss          00000004  00800104  00800104  00001b6c  2**0
+  2 .bss          00000004  00800104  00800104  0000105c  2**0
                   ALLOC
-  3 .comment      00000030  00000000  00000000  00001b6c  2**0
+  3 .comment      00000030  00000000  00000000  0000105c  2**0
                   CONTENTS, READONLY
-  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00001b9c  2**2
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  0000108c  2**2
                   CONTENTS, READONLY
-  5 .debug_aranges 00000058  00000000  00000000  00001bdc  2**0
+  5 .debug_aranges 00000058  00000000  00000000  000010cc  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   00001642  00000000  00000000  00001c34  2**0
+  6 .debug_info   00000f49  00000000  00000000  00001124  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00000747  00000000  00000000  00003276  2**0
+  7 .debug_abbrev 0000077c  00000000  00000000  0000206d  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   0000113a  00000000  00000000  000039bd  2**0
+  8 .debug_line   00000d2a  00000000  00000000  000027e9  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  00000094  00000000  00000000  00004af8  2**2
+  9 .debug_frame  000000a0  00000000  00000000  00003514  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    000004e0  00000000  00000000  00004b8c  2**0
+ 10 .debug_str    000004e0  00000000  00000000  000035b4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    000000c2  00000000  00000000  0000506c  2**0
+ 11 .debug_loc    000000e8  00000000  00000000  00003a94  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000060  00000000  00000000  0000512e  2**0
+ 12 .debug_ranges 00000048  00000000  00000000  00003b7c  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
 
 00000000 <__vectors>:
-       0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
-       4:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-       8:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-       c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-      10:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-      14:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-      18:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-      1c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-      20:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-      24:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-      28:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-      2c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-      30:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-      34:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-      38:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-      3c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-      40:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-      44:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-      48:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-      4c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-      50:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-      54:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-      58:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-      5c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-      60:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-      64:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+   8:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+   c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  10:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  14:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  18:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  1c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  20:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  24:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  28:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  2c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  30:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  34:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  38:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  3c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  40:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  44:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  48:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  4c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  50:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  54:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  58:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  5c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  60:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  64:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
 
 00000068 <__ctors_end>:
-      68:	11 24       	eor	r1, r1
-      6a:	1f be       	out	0x3f, r1	; 63
-      6c:	cf ef       	ldi	r28, 0xFF	; 255
-      6e:	d8 e0       	ldi	r29, 0x08	; 8
-      70:	de bf       	out	0x3e, r29	; 62
-      72:	cd bf       	out	0x3d, r28	; 61
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
 
 00000074 <__do_copy_data>:
-      74:	11 e0       	ldi	r17, 0x01	; 1
-      76:	a0 e0       	ldi	r26, 0x00	; 0
-      78:	b1 e0       	ldi	r27, 0x01	; 1
-      7a:	e4 ed       	ldi	r30, 0xD4	; 212
-      7c:	fa e1       	ldi	r31, 0x1A	; 26
-      7e:	02 c0       	rjmp	.+4      	; 0x84 <__do_copy_data+0x10>
-      80:	05 90       	lpm	r0, Z+
-      82:	0d 92       	st	X+, r0
-      84:	a4 30       	cpi	r26, 0x04	; 4
-      86:	b1 07       	cpc	r27, r17
-      88:	d9 f7       	brne	.-10     	; 0x80 <__do_copy_data+0xc>
+  74:	11 e0       	ldi	r17, 0x01	; 1
+  76:	a0 e0       	ldi	r26, 0x00	; 0
+  78:	b1 e0       	ldi	r27, 0x01	; 1
+  7a:	e4 ec       	ldi	r30, 0xC4	; 196
+  7c:	ff e0       	ldi	r31, 0x0F	; 15
+  7e:	02 c0       	rjmp	.+4      	; 0x84 <__do_copy_data+0x10>
+  80:	05 90       	lpm	r0, Z+
+  82:	0d 92       	st	X+, r0
+  84:	a4 30       	cpi	r26, 0x04	; 4
+  86:	b1 07       	cpc	r27, r17
+  88:	d9 f7       	brne	.-10     	; 0x80 <__do_copy_data+0xc>
 
 0000008a <__do_clear_bss>:
-      8a:	21 e0       	ldi	r18, 0x01	; 1
-      8c:	a4 e0       	ldi	r26, 0x04	; 4
-      8e:	b1 e0       	ldi	r27, 0x01	; 1
-      90:	01 c0       	rjmp	.+2      	; 0x94 <.do_clear_bss_start>
+  8a:	21 e0       	ldi	r18, 0x01	; 1
+  8c:	a4 e0       	ldi	r26, 0x04	; 4
+  8e:	b1 e0       	ldi	r27, 0x01	; 1
+  90:	01 c0       	rjmp	.+2      	; 0x94 <.do_clear_bss_start>
 
 00000092 <.do_clear_bss_loop>:
-      92:	1d 92       	st	X+, r1
+  92:	1d 92       	st	X+, r1
 
 00000094 <.do_clear_bss_start>:
-      94:	a8 30       	cpi	r26, 0x08	; 8
-      96:	b2 07       	cpc	r27, r18
-      98:	e1 f7       	brne	.-8      	; 0x92 <.do_clear_bss_loop>
-      9a:	0e 94 4d 0d 	call	0x1a9a	; 0x1a9a <main>
-      9e:	0c 94 68 0d 	jmp	0x1ad0	; 0x1ad0 <_exit>
+  94:	a8 30       	cpi	r26, 0x08	; 8
+  96:	b2 07       	cpc	r27, r18
+  98:	e1 f7       	brne	.-8      	; 0x92 <.do_clear_bss_loop>
+  9a:	0e 94 c5 07 	call	0xf8a	; 0xf8a <main>
+  9e:	0c 94 e0 07 	jmp	0xfc0	; 0xfc0 <_exit>
 
 000000a2 <__bad_interrupt>:
-      a2:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+  a2:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
-000000a6 <mandar_cero>:
+000000a6 <mandar_rojo>:
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-      a6:	85 b1       	in	r24, 0x05	; 5
-      a8:	81 60       	ori	r24, 0x01	; 1
-      aa:	85 b9       	out	0x05, r24	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+  a6:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-      b4:	85 b1       	in	r24, 0x05	; 5
-      b6:	8e 7f       	andi	r24, 0xFE	; 254
-      b8:	85 b9       	out	0x05, r24	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+  b0:	28 98       	cbi	0x05, 0	; 5
 	...
-	
-	// T0L: Mantenemos en BAJO 12 ciclos más 
-	asm volatile(
-      d2:	08 95       	ret
+        }
+    }
+}
 
-000000d4 <mandar_uno>:
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+  ca:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+  d4:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+  ee:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+  f8:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 112:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 11c:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 136:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 140:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 15a:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 164:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 17e:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 188:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 1a2:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 1ac:	28 98       	cbi	0x05, 0	; 5
+	...
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 }
 
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-      d4:	85 b1       	in	r24, 0x05	; 5
-      d6:	81 60       	ori	r24, 0x01	; 1
-      d8:	85 b9       	out	0x05, r24	; 5
+static inline void __attribute__((always_inline)) mandar_uno() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 1c6:	28 9a       	sbi	0x05, 0	; 5
 	...
 	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-      ee:	00 00       	nop
+	// T1H: Mantenemos en ALTO 11 ciclos más (Total 13 ciclos = 812 ns)
+	asm volatile (
+ 1dc:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	"nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-      f0:	85 b1       	in	r24, 0x05	; 5
-      f2:	8e 7f       	andi	r24, 0xFE	; 254
-      f4:	85 b9       	out	0x05, r24	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 1de:	28 98       	cbi	0x05, 0	; 5
 	...
 	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
+	// T1L: Mantenemos en BAJO 5 ciclos más (Total 7 ciclos = 437 ns)
 	asm volatile(
-      fe:	00 00       	nop
-     100:	08 95       	ret
+ 1e8:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+}
 
-00000102 <mandar_vacio>:
+static inline void __attribute__((always_inline)) mandar_uno() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 1ea:	28 9a       	sbi	0x05, 0	; 5
+	...
+	
+	// T1H: Mantenemos en ALTO 11 ciclos más (Total 13 ciclos = 812 ns)
+	asm volatile (
+ 200:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 202:	28 98       	cbi	0x05, 0	; 5
+	...
+	
+	// T1L: Mantenemos en BAJO 5 ciclos más (Total 7 ciclos = 437 ns)
+	asm volatile(
+ 20c:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+}
+
+static inline void __attribute__((always_inline)) mandar_uno() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 20e:	28 9a       	sbi	0x05, 0	; 5
+	...
+	
+	// T1H: Mantenemos en ALTO 11 ciclos más (Total 13 ciclos = 812 ns)
+	asm volatile (
+ 224:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 226:	28 98       	cbi	0x05, 0	; 5
+	...
+	
+	// T1L: Mantenemos en BAJO 5 ciclos más (Total 7 ciclos = 437 ns)
+	asm volatile(
+ 230:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+}
+
+static inline void __attribute__((always_inline)) mandar_uno() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 232:	28 9a       	sbi	0x05, 0	; 5
+	...
+	
+	// T1H: Mantenemos en ALTO 11 ciclos más (Total 13 ciclos = 812 ns)
+	asm volatile (
+ 248:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 24a:	28 98       	cbi	0x05, 0	; 5
+	...
+	
+	// T1L: Mantenemos en BAJO 5 ciclos más (Total 7 ciclos = 437 ns)
+	asm volatile(
+ 254:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+}
+
+static inline void __attribute__((always_inline)) mandar_uno() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 256:	28 9a       	sbi	0x05, 0	; 5
+	...
+	
+	// T1H: Mantenemos en ALTO 11 ciclos más (Total 13 ciclos = 812 ns)
+	asm volatile (
+ 26c:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 26e:	28 98       	cbi	0x05, 0	; 5
+	...
+	
+	// T1L: Mantenemos en BAJO 5 ciclos más (Total 7 ciclos = 437 ns)
+	asm volatile(
+ 278:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+}
+
+static inline void __attribute__((always_inline)) mandar_uno() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 27a:	28 9a       	sbi	0x05, 0	; 5
+	...
+	
+	// T1H: Mantenemos en ALTO 11 ciclos más (Total 13 ciclos = 812 ns)
+	asm volatile (
+ 290:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 292:	28 98       	cbi	0x05, 0	; 5
+	...
+	
+	// T1L: Mantenemos en BAJO 5 ciclos más (Total 7 ciclos = 437 ns)
+	asm volatile(
+ 29c:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+}
+
+static inline void __attribute__((always_inline)) mandar_uno() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 29e:	28 9a       	sbi	0x05, 0	; 5
+	...
+	
+	// T1H: Mantenemos en ALTO 11 ciclos más (Total 13 ciclos = 812 ns)
+	asm volatile (
+ 2b4:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 2b6:	28 98       	cbi	0x05, 0	; 5
+	...
+	
+	// T1L: Mantenemos en BAJO 5 ciclos más (Total 7 ciclos = 437 ns)
+	asm volatile(
+ 2c0:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+}
+
+static inline void __attribute__((always_inline)) mandar_uno() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 2c2:	28 9a       	sbi	0x05, 0	; 5
+	...
+	
+	// T1H: Mantenemos en ALTO 11 ciclos más (Total 13 ciclos = 812 ns)
+	asm volatile (
+ 2d8:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 2da:	28 98       	cbi	0x05, 0	; 5
+	...
+	
+	// T1L: Mantenemos en BAJO 5 ciclos más (Total 7 ciclos = 437 ns)
+	asm volatile(
+ 2e4:	00 00       	nop
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     102:	85 b1       	in	r24, 0x05	; 5
-     104:	81 60       	ori	r24, 0x01	; 1
-     106:	85 b9       	out	0x05, r24	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 2e6:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     110:	85 b1       	in	r24, 0x05	; 5
-     112:	8e 7f       	andi	r24, 0xFE	; 254
-     114:	85 b9       	out	0x05, r24	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     12e:	85 b1       	in	r24, 0x05	; 5
-     130:	81 60       	ori	r24, 0x01	; 1
-     132:	85 b9       	out	0x05, r24	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     13c:	85 b1       	in	r24, 0x05	; 5
-     13e:	8e 7f       	andi	r24, 0xFE	; 254
-     140:	85 b9       	out	0x05, r24	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     15a:	85 b1       	in	r24, 0x05	; 5
-     15c:	81 60       	ori	r24, 0x01	; 1
-     15e:	85 b9       	out	0x05, r24	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     168:	85 b1       	in	r24, 0x05	; 5
-     16a:	8e 7f       	andi	r24, 0xFE	; 254
-     16c:	85 b9       	out	0x05, r24	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     186:	85 b1       	in	r24, 0x05	; 5
-     188:	81 60       	ori	r24, 0x01	; 1
-     18a:	85 b9       	out	0x05, r24	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     194:	85 b1       	in	r24, 0x05	; 5
-     196:	8e 7f       	andi	r24, 0xFE	; 254
-     198:	85 b9       	out	0x05, r24	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     1b2:	85 b1       	in	r24, 0x05	; 5
-     1b4:	81 60       	ori	r24, 0x01	; 1
-     1b6:	85 b9       	out	0x05, r24	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     1c0:	85 b1       	in	r24, 0x05	; 5
-     1c2:	8e 7f       	andi	r24, 0xFE	; 254
-     1c4:	85 b9       	out	0x05, r24	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     1de:	85 b1       	in	r24, 0x05	; 5
-     1e0:	81 60       	ori	r24, 0x01	; 1
-     1e2:	85 b9       	out	0x05, r24	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     1ec:	85 b1       	in	r24, 0x05	; 5
-     1ee:	8e 7f       	andi	r24, 0xFE	; 254
-     1f0:	85 b9       	out	0x05, r24	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     20a:	85 b1       	in	r24, 0x05	; 5
-     20c:	81 60       	ori	r24, 0x01	; 1
-     20e:	85 b9       	out	0x05, r24	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     218:	85 b1       	in	r24, 0x05	; 5
-     21a:	8e 7f       	andi	r24, 0xFE	; 254
-     21c:	85 b9       	out	0x05, r24	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     236:	85 b1       	in	r24, 0x05	; 5
-     238:	81 60       	ori	r24, 0x01	; 1
-     23a:	85 b9       	out	0x05, r24	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     244:	85 b1       	in	r24, 0x05	; 5
-     246:	8e 7f       	andi	r24, 0xFE	; 254
-     248:	85 b9       	out	0x05, r24	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     262:	85 b1       	in	r24, 0x05	; 5
-     264:	81 60       	ori	r24, 0x01	; 1
-     266:	85 b9       	out	0x05, r24	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     270:	85 b1       	in	r24, 0x05	; 5
-     272:	8e 7f       	andi	r24, 0xFE	; 254
-     274:	85 b9       	out	0x05, r24	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     28e:	85 b1       	in	r24, 0x05	; 5
-     290:	81 60       	ori	r24, 0x01	; 1
-     292:	85 b9       	out	0x05, r24	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     29c:	85 b1       	in	r24, 0x05	; 5
-     29e:	8e 7f       	andi	r24, 0xFE	; 254
-     2a0:	85 b9       	out	0x05, r24	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 2f0:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     2ba:	85 b1       	in	r24, 0x05	; 5
-     2bc:	81 60       	ori	r24, 0x01	; 1
-     2be:	85 b9       	out	0x05, r24	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 30a:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     2c8:	85 b1       	in	r24, 0x05	; 5
-     2ca:	8e 7f       	andi	r24, 0xFE	; 254
-     2cc:	85 b9       	out	0x05, r24	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 314:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     2e6:	85 b1       	in	r24, 0x05	; 5
-     2e8:	81 60       	ori	r24, 0x01	; 1
-     2ea:	85 b9       	out	0x05, r24	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 32e:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     2f4:	85 b1       	in	r24, 0x05	; 5
-     2f6:	8e 7f       	andi	r24, 0xFE	; 254
-     2f8:	85 b9       	out	0x05, r24	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 338:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     312:	85 b1       	in	r24, 0x05	; 5
-     314:	81 60       	ori	r24, 0x01	; 1
-     316:	85 b9       	out	0x05, r24	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 352:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     320:	85 b1       	in	r24, 0x05	; 5
-     322:	8e 7f       	andi	r24, 0xFE	; 254
-     324:	85 b9       	out	0x05, r24	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 35c:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     33e:	85 b1       	in	r24, 0x05	; 5
-     340:	81 60       	ori	r24, 0x01	; 1
-     342:	85 b9       	out	0x05, r24	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 376:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     34c:	85 b1       	in	r24, 0x05	; 5
-     34e:	8e 7f       	andi	r24, 0xFE	; 254
-     350:	85 b9       	out	0x05, r24	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 380:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     36a:	85 b1       	in	r24, 0x05	; 5
-     36c:	81 60       	ori	r24, 0x01	; 1
-     36e:	85 b9       	out	0x05, r24	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 39a:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     378:	85 b1       	in	r24, 0x05	; 5
-     37a:	8e 7f       	andi	r24, 0xFE	; 254
-     37c:	85 b9       	out	0x05, r24	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 3a4:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     396:	85 b1       	in	r24, 0x05	; 5
-     398:	81 60       	ori	r24, 0x01	; 1
-     39a:	85 b9       	out	0x05, r24	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 3be:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     3a4:	85 b1       	in	r24, 0x05	; 5
-     3a6:	8e 7f       	andi	r24, 0xFE	; 254
-     3a8:	85 b9       	out	0x05, r24	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 3c8:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     3c2:	85 b1       	in	r24, 0x05	; 5
-     3c4:	81 60       	ori	r24, 0x01	; 1
-     3c6:	85 b9       	out	0x05, r24	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 3e2:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     3d0:	85 b1       	in	r24, 0x05	; 5
-     3d2:	8e 7f       	andi	r24, 0xFE	; 254
-     3d4:	85 b9       	out	0x05, r24	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 3ec:	28 98       	cbi	0x05, 0	; 5
+	...
+	
+	// T0L: Mantenemos en BAJO 12 ciclos más (Total 14 ciclos = 875 ns)
+	asm volatile(
+ 406:	08 95       	ret
+
+00000408 <mandar_azul>:
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 408:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 412:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     3ee:	85 b1       	in	r24, 0x05	; 5
-     3f0:	81 60       	ori	r24, 0x01	; 1
-     3f2:	85 b9       	out	0x05, r24	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 42c:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     3fc:	85 b1       	in	r24, 0x05	; 5
-     3fe:	8e 7f       	andi	r24, 0xFE	; 254
-     400:	85 b9       	out	0x05, r24	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 436:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     41a:	85 b1       	in	r24, 0x05	; 5
-     41c:	81 60       	ori	r24, 0x01	; 1
-     41e:	85 b9       	out	0x05, r24	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 450:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     428:	85 b1       	in	r24, 0x05	; 5
-     42a:	8e 7f       	andi	r24, 0xFE	; 254
-     42c:	85 b9       	out	0x05, r24	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 45a:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     446:	85 b1       	in	r24, 0x05	; 5
-     448:	81 60       	ori	r24, 0x01	; 1
-     44a:	85 b9       	out	0x05, r24	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 474:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     454:	85 b1       	in	r24, 0x05	; 5
-     456:	8e 7f       	andi	r24, 0xFE	; 254
-     458:	85 b9       	out	0x05, r24	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 47e:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     472:	85 b1       	in	r24, 0x05	; 5
-     474:	81 60       	ori	r24, 0x01	; 1
-     476:	85 b9       	out	0x05, r24	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 498:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     480:	85 b1       	in	r24, 0x05	; 5
-     482:	8e 7f       	andi	r24, 0xFE	; 254
-     484:	85 b9       	out	0x05, r24	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 4a2:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     49e:	85 b1       	in	r24, 0x05	; 5
-     4a0:	81 60       	ori	r24, 0x01	; 1
-     4a2:	85 b9       	out	0x05, r24	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 4bc:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     4ac:	85 b1       	in	r24, 0x05	; 5
-     4ae:	8e 7f       	andi	r24, 0xFE	; 254
-     4b0:	85 b9       	out	0x05, r24	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 4c6:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     4ca:	85 b1       	in	r24, 0x05	; 5
-     4cc:	81 60       	ori	r24, 0x01	; 1
-     4ce:	85 b9       	out	0x05, r24	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 4e0:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     4d8:	85 b1       	in	r24, 0x05	; 5
-     4da:	8e 7f       	andi	r24, 0xFE	; 254
-     4dc:	85 b9       	out	0x05, r24	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 4ea:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     4f6:	85 b1       	in	r24, 0x05	; 5
-     4f8:	81 60       	ori	r24, 0x01	; 1
-     4fa:	85 b9       	out	0x05, r24	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 504:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     504:	85 b1       	in	r24, 0x05	; 5
-     506:	8e 7f       	andi	r24, 0xFE	; 254
-     508:	85 b9       	out	0x05, r24	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 50e:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 528:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 532:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 54c:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 556:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 570:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 57a:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 594:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 59e:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 5b8:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 5c2:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 5dc:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 5e6:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 600:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 60a:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 624:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 62e:	28 98       	cbi	0x05, 0	; 5
+	...
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+}
+
+static inline void __attribute__((always_inline)) mandar_uno() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 648:	28 9a       	sbi	0x05, 0	; 5
 	...
 	
-	// T0L: Mantenemos en BAJO 12 ciclos más 
+	// T1H: Mantenemos en ALTO 11 ciclos más (Total 13 ciclos = 812 ns)
+	asm volatile (
+ 65e:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 660:	28 98       	cbi	0x05, 0	; 5
+	...
+	
+	// T1L: Mantenemos en BAJO 5 ciclos más (Total 7 ciclos = 437 ns)
 	asm volatile(
-     522:	08 95       	ret
+ 66a:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+}
 
-00000524 <configurar_io>:
+static inline void __attribute__((always_inline)) mandar_uno() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 66c:	28 9a       	sbi	0x05, 0	; 5
+	...
+	
+	// T1H: Mantenemos en ALTO 11 ciclos más (Total 13 ciclos = 812 ns)
+	asm volatile (
+ 682:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 684:	28 98       	cbi	0x05, 0	; 5
+	...
+	
+	// T1L: Mantenemos en BAJO 5 ciclos más (Total 7 ciclos = 437 ns)
+	asm volatile(
+ 68e:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+}
+
+static inline void __attribute__((always_inline)) mandar_uno() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 690:	28 9a       	sbi	0x05, 0	; 5
+	...
+	
+	// T1H: Mantenemos en ALTO 11 ciclos más (Total 13 ciclos = 812 ns)
+	asm volatile (
+ 6a6:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 6a8:	28 98       	cbi	0x05, 0	; 5
+	...
+	
+	// T1L: Mantenemos en BAJO 5 ciclos más (Total 7 ciclos = 437 ns)
+	asm volatile(
+ 6b2:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+}
+
+static inline void __attribute__((always_inline)) mandar_uno() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 6b4:	28 9a       	sbi	0x05, 0	; 5
+	...
+	
+	// T1H: Mantenemos en ALTO 11 ciclos más (Total 13 ciclos = 812 ns)
+	asm volatile (
+ 6ca:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 6cc:	28 98       	cbi	0x05, 0	; 5
+	...
+	
+	// T1L: Mantenemos en BAJO 5 ciclos más (Total 7 ciclos = 437 ns)
+	asm volatile(
+ 6d6:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+}
+
+static inline void __attribute__((always_inline)) mandar_uno() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 6d8:	28 9a       	sbi	0x05, 0	; 5
+	...
+	
+	// T1H: Mantenemos en ALTO 11 ciclos más (Total 13 ciclos = 812 ns)
+	asm volatile (
+ 6ee:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 6f0:	28 98       	cbi	0x05, 0	; 5
+	...
+	
+	// T1L: Mantenemos en BAJO 5 ciclos más (Total 7 ciclos = 437 ns)
+	asm volatile(
+ 6fa:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+}
+
+static inline void __attribute__((always_inline)) mandar_uno() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 6fc:	28 9a       	sbi	0x05, 0	; 5
+	...
+	
+	// T1H: Mantenemos en ALTO 11 ciclos más (Total 13 ciclos = 812 ns)
+	asm volatile (
+ 712:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 714:	28 98       	cbi	0x05, 0	; 5
+	...
+	
+	// T1L: Mantenemos en BAJO 5 ciclos más (Total 7 ciclos = 437 ns)
+	asm volatile(
+ 71e:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+}
+
+static inline void __attribute__((always_inline)) mandar_uno() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 720:	28 9a       	sbi	0x05, 0	; 5
+	...
+	
+	// T1H: Mantenemos en ALTO 11 ciclos más (Total 13 ciclos = 812 ns)
+	asm volatile (
+ 736:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 738:	28 98       	cbi	0x05, 0	; 5
+	...
+	
+	// T1L: Mantenemos en BAJO 5 ciclos más (Total 7 ciclos = 437 ns)
+	asm volatile(
+ 742:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+}
+
+static inline void __attribute__((always_inline)) mandar_uno() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 744:	28 9a       	sbi	0x05, 0	; 5
+	...
+	
+	// T1H: Mantenemos en ALTO 11 ciclos más (Total 13 ciclos = 812 ns)
+	asm volatile (
+ 75a:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 75c:	28 98       	cbi	0x05, 0	; 5
+	...
+	
+	// T1L: Mantenemos en BAJO 5 ciclos más (Total 7 ciclos = 437 ns)
+	asm volatile(
+ 766:	00 00       	nop
+ 768:	08 95       	ret
+
+0000076a <mandar_vacio>:
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 76a:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 774:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 78e:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 798:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 7b2:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 7bc:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 7d6:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 7e0:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 7fa:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 804:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 81e:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 828:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 842:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 84c:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 866:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 870:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 88a:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 894:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 8ae:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 8b8:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 8d2:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 8dc:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 8f6:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 900:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 91a:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 924:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 93e:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 948:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 962:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 96c:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 986:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 990:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 9aa:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 9b4:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 9ce:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 9d8:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ 9f2:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ 9fc:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ a16:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ a20:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ a3a:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ a44:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ a5e:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ a68:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ a82:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ a8c:	28 98       	cbi	0x05, 0	; 5
+	...
+        }
+    }
+}
+
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ aa6:	28 9a       	sbi	0x05, 0	; 5
+	...
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
+	asm volatile(
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	);
+	
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ ab0:	28 98       	cbi	0x05, 0	; 5
+	...
+	
+	// T0L: Mantenemos en BAJO 12 ciclos más (Total 14 ciclos = 875 ns)
+	asm volatile(
+ aca:	08 95       	ret
+
+00000acc <configurar_io>:
     }
 }
 
 void configurar_io() {
-    // Puerto D: Todo salida (8 LEDs)
+    // Puerto D: Todo salida
     DDRD = 0xFF;
-     524:	8f ef       	ldi	r24, 0xFF	; 255
-     526:	8a b9       	out	0x0a, r24	; 10
+ acc:	8f ef       	ldi	r24, 0xFF	; 255
+ ace:	8a b9       	out	0x0a, r24	; 10
     
     // Puerto B: PB0 como salida (Neopixel)
     DDRB |= (1 << PB0);
-     528:	84 b1       	in	r24, 0x04	; 4
-     52a:	81 60       	ori	r24, 0x01	; 1
-     52c:	84 b9       	out	0x04, r24	; 4
+ ad0:	20 9a       	sbi	0x04, 0	; 4
 
-    // Puerto C: PC0 y PC1 como entradas (0)
+    // Puerto C: PC0 y PC1 como entradas (Pulsadores)
     DDRC &= ~((1 << PC0) | (1 << PC1));
-     52e:	87 b1       	in	r24, 0x07	; 7
-     530:	8c 7f       	andi	r24, 0xFC	; 252
-     532:	87 b9       	out	0x07, r24	; 7
+ ad2:	87 b1       	in	r24, 0x07	; 7
+ ad4:	8c 7f       	andi	r24, 0xFC	; 252
+ ad6:	87 b9       	out	0x07, r24	; 7
 	
-    // Activar Pull-ups internos (Escribir 1 en el PORT siendo entrada)
+    // Activar Pull-ups internos 
     PORTC |= (1 << PC0) | (1 << PC1);
-     534:	88 b1       	in	r24, 0x08	; 8
-     536:	83 60       	ori	r24, 0x03	; 3
-     538:	88 b9       	out	0x08, r24	; 8
-     53a:	08 95       	ret
+ ad8:	88 b1       	in	r24, 0x08	; 8
+ ada:	83 60       	ori	r24, 0x03	; 3
+ adc:	88 b9       	out	0x08, r24	; 8
+ ade:	08 95       	ret
 
-0000053c <leer_pulsadores>:
+00000ae0 <leer_pulsadores>:
 }
 
 void leer_pulsadores() {
-    // --- LÓGICA PARA PC0 (LEDs del Puerto D) ---
+    // LÓGICA PARA PC0 ( LEDs del Puerto D)
     uint8_t estado_act_PC0 = (PINC & (1 << PINC0)) ? 1 : 0;
-     53c:	96 b1       	in	r25, 0x06	; 6
-     53e:	81 e0       	ldi	r24, 0x01	; 1
-     540:	29 2f       	mov	r18, r25
-     542:	21 70       	andi	r18, 0x01	; 1
-     544:	90 ff       	sbrs	r25, 0
-     546:	80 e0       	ldi	r24, 0x00	; 0
+ ae0:	86 b1       	in	r24, 0x06	; 6
+ ae2:	81 70       	andi	r24, 0x01	; 1
 
     if (estado_ant_PC0 == 0 && estado_act_PC0 == 1) {
-     548:	90 91 02 01 	lds	r25, 0x0102	; 0x800102 <estado_ant_PC0>
-     54c:	91 11       	cpse	r25, r1
-     54e:	0e c0       	rjmp	.+28     	; 0x56c <leer_pulsadores+0x30>
-     550:	22 23       	and	r18, r18
-     552:	61 f0       	breq	.+24     	; 0x56c <leer_pulsadores+0x30>
+ ae4:	90 91 02 01 	lds	r25, 0x0102	; 0x800102 <estado_ant_PC0>
+ ae8:	91 11       	cpse	r25, r1
+ aea:	0e c0       	rjmp	.+28     	; 0xb08 <leer_pulsadores+0x28>
+ aec:	88 23       	and	r24, r24
+ aee:	61 f0       	breq	.+24     	; 0xb08 <leer_pulsadores+0x28>
         modo_D = !modo_D; // Cambia el modo
-     554:	91 e0       	ldi	r25, 0x01	; 1
-     556:	20 91 07 01 	lds	r18, 0x0107	; 0x800107 <modo_D>
-     55a:	21 11       	cpse	r18, r1
-     55c:	90 e0       	ldi	r25, 0x00	; 0
-     55e:	90 93 07 01 	sts	0x0107, r25	; 0x800107 <modo_D>
+ af0:	90 91 07 01 	lds	r25, 0x0107	; 0x800107 <modo_D>
+ af4:	21 e0       	ldi	r18, 0x01	; 1
+ af6:	91 11       	cpse	r25, r1
+ af8:	20 e0       	ldi	r18, 0x00	; 0
+ afa:	20 93 07 01 	sts	0x0107, r18	; 0x800107 <modo_D>
         
         // Si entramos a la Secuencia B, forzamos que retroceda
         if (modo_D == 1) {
-     562:	91 30       	cpi	r25, 0x01	; 1
-     564:	19 f4       	brne	.+6      	; 0x56c <leer_pulsadores+0x30>
+ afe:	91 11       	cpse	r25, r1
+ b00:	03 c0       	rjmp	.+6      	; 0xb08 <leer_pulsadores+0x28>
             direccion = -1;
-     566:	9f ef       	ldi	r25, 0xFF	; 255
-     568:	90 93 03 01 	sts	0x0103, r25	; 0x800103 <direccion>
+ b02:	9f ef       	ldi	r25, 0xFF	; 255
+ b04:	90 93 03 01 	sts	0x0103, r25	; 0x800103 <direccion>
         }
     } 
     
     estado_ant_PC0 = estado_act_PC0;
-     56c:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <estado_ant_PC0>
+ b08:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <estado_ant_PC0>
     
-    // --- LÓGICA PARA PC1 (Neopixels) ---
+    // LÓGICA PARA PC1 (Neopixels)
     uint8_t estado_act_PC1 = (PINC & (1 << PINC1)) ? 1 : 0;
-     570:	96 b1       	in	r25, 0x06	; 6
-     572:	81 e0       	ldi	r24, 0x01	; 1
-     574:	29 2f       	mov	r18, r25
-     576:	22 70       	andi	r18, 0x02	; 2
-     578:	91 ff       	sbrs	r25, 1
-     57a:	80 e0       	ldi	r24, 0x00	; 0
+ b0c:	96 b1       	in	r25, 0x06	; 6
+ b0e:	81 e0       	ldi	r24, 0x01	; 1
+ b10:	29 2f       	mov	r18, r25
+ b12:	22 70       	andi	r18, 0x02	; 2
+ b14:	91 ff       	sbrs	r25, 1
+ b16:	80 e0       	ldi	r24, 0x00	; 0
     
     if (estado_ant_PC1 == 0 && estado_act_PC1 == 1) {
-     57c:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <estado_ant_PC1>
-     580:	91 11       	cpse	r25, r1
-     582:	0c c0       	rjmp	.+24     	; 0x59c <leer_pulsadores+0x60>
-     584:	22 23       	and	r18, r18
-     586:	51 f0       	breq	.+20     	; 0x59c <leer_pulsadores+0x60>
+ b18:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <estado_ant_PC1>
+ b1c:	91 11       	cpse	r25, r1
+ b1e:	0c c0       	rjmp	.+24     	; 0xb38 <leer_pulsadores+0x58>
+ b20:	22 23       	and	r18, r18
+ b22:	51 f0       	breq	.+20     	; 0xb38 <leer_pulsadores+0x58>
         modo_Neo = !modo_Neo; // Cambia el modo del Neopixel
-     588:	91 e0       	ldi	r25, 0x01	; 1
-     58a:	20 91 05 01 	lds	r18, 0x0105	; 0x800105 <modo_Neo>
-     58e:	21 11       	cpse	r18, r1
-     590:	90 e0       	ldi	r25, 0x00	; 0
-     592:	90 93 05 01 	sts	0x0105, r25	; 0x800105 <modo_Neo>
+ b24:	91 e0       	ldi	r25, 0x01	; 1
+ b26:	20 91 05 01 	lds	r18, 0x0105	; 0x800105 <modo_Neo>
+ b2a:	21 11       	cpse	r18, r1
+ b2c:	90 e0       	ldi	r25, 0x00	; 0
+ b2e:	90 93 05 01 	sts	0x0105, r25	; 0x800105 <modo_Neo>
 		pos_verde=7; // Fuerza arracar de la derecha
-     596:	97 e0       	ldi	r25, 0x07	; 7
-     598:	90 93 00 01 	sts	0x0100, r25	; 0x800100 <__DATA_REGION_ORIGIN__>
+ b32:	97 e0       	ldi	r25, 0x07	; 7
+ b34:	90 93 00 01 	sts	0x0100, r25	; 0x800100 <__DATA_REGION_ORIGIN__>
     }
     
     estado_ant_PC1 = estado_act_PC1;
-     59c:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <estado_ant_PC1>
-     5a0:	08 95       	ret
+ b38:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <estado_ant_PC1>
+ b3c:	08 95       	ret
 
-000005a2 <ejecutar_secuencias_D>:
+00000b3e <ejecutar_secuencias_D>:
 }
 
 void ejecutar_secuencias_D() {
     // Prendemos el LED correspondiente al índice actual
     PORTD = (1 << indice_led);
-     5a2:	81 e0       	ldi	r24, 0x01	; 1
-     5a4:	90 e0       	ldi	r25, 0x00	; 0
-     5a6:	00 90 06 01 	lds	r0, 0x0106	; 0x800106 <indice_led>
-     5aa:	02 c0       	rjmp	.+4      	; 0x5b0 <ejecutar_secuencias_D+0xe>
-     5ac:	88 0f       	add	r24, r24
-     5ae:	99 1f       	adc	r25, r25
-     5b0:	0a 94       	dec	r0
-     5b2:	e2 f7       	brpl	.-8      	; 0x5ac <ejecutar_secuencias_D+0xa>
-     5b4:	8b b9       	out	0x0b, r24	; 11
+ b3e:	81 e0       	ldi	r24, 0x01	; 1
+ b40:	90 e0       	ldi	r25, 0x00	; 0
+ b42:	00 90 06 01 	lds	r0, 0x0106	; 0x800106 <indice_led>
+ b46:	02 c0       	rjmp	.+4      	; 0xb4c <ejecutar_secuencias_D+0xe>
+ b48:	88 0f       	add	r24, r24
+ b4a:	99 1f       	adc	r25, r25
+ b4c:	0a 94       	dec	r0
+ b4e:	e2 f7       	brpl	.-8      	; 0xb48 <ejecutar_secuencias_D+0xa>
+ b50:	8b b9       	out	0x0b, r24	; 11
 
     // Calculamos cuál será el próximo LED según el modo
     if (modo_D == 0) {
-     5b6:	80 91 07 01 	lds	r24, 0x0107	; 0x800107 <modo_D>
-     5ba:	81 11       	cpse	r24, r1
-     5bc:	0a c0       	rjmp	.+20     	; 0x5d2 <ejecutar_secuencias_D+0x30>
+ b52:	90 91 07 01 	lds	r25, 0x0107	; 0x800107 <modo_D>
+ b56:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <indice_led>
+ b5a:	91 11       	cpse	r25, r1
+ b5c:	09 c0       	rjmp	.+18     	; 0xb70 <ejecutar_secuencias_D+0x32>
         // SECUENCIA A: LSB (0) hacia MSB (7) repetitivamente
         indice_led++;
-     5be:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <indice_led>
-     5c2:	8f 5f       	subi	r24, 0xFF	; 255
-     5c4:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <indice_led>
+ b5e:	8f 5f       	subi	r24, 0xFF	; 255
         if (indice_led > 7) {
-     5c8:	88 30       	cpi	r24, 0x08	; 8
-     5ca:	ac f0       	brlt	.+42     	; 0x5f6 <ejecutar_secuencias_D+0x54>
+ b60:	88 30       	cpi	r24, 0x08	; 8
+ b62:	1c f4       	brge	.+6      	; 0xb6a <ejecutar_secuencias_D+0x2c>
+    PORTD = (1 << indice_led);
+
+    // Calculamos cuál será el próximo LED según el modo
+    if (modo_D == 0) {
+        // SECUENCIA A: LSB (0) hacia MSB (7) repetitivamente
+        indice_led++;
+ b64:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <indice_led>
+ b68:	08 95       	ret
+        if (indice_led > 7) {
             indice_led = 0; // Vuelve a empezar desde el LSB
-     5cc:	10 92 06 01 	sts	0x0106, r1	; 0x800106 <indice_led>
-     5d0:	08 95       	ret
+ b6a:	10 92 06 01 	sts	0x0106, r1	; 0x800106 <indice_led>
+ b6e:	08 95       	ret
         }
     }
     else {
         // SECUENCIA B: Rebote
         indice_led += direccion;
-     5d2:	90 91 06 01 	lds	r25, 0x0106	; 0x800106 <indice_led>
-     5d6:	80 91 03 01 	lds	r24, 0x0103	; 0x800103 <direccion>
-     5da:	89 0f       	add	r24, r25
-     5dc:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <indice_led>
+ b70:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <direccion>
+ b74:	89 0f       	add	r24, r25
+ b76:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <indice_led>
         
         if (indice_led >= 7) {
-     5e0:	87 30       	cpi	r24, 0x07	; 7
-     5e2:	24 f0       	brlt	.+8      	; 0x5ec <ejecutar_secuencias_D+0x4a>
+ b7a:	87 30       	cpi	r24, 0x07	; 7
+ b7c:	14 f0       	brlt	.+4      	; 0xb82 <ejecutar_secuencias_D+0x44>
             direccion = -1; // Chocó arriba, ahora baja
-     5e4:	8f ef       	ldi	r24, 0xFF	; 255
-     5e6:	80 93 03 01 	sts	0x0103, r24	; 0x800103 <direccion>
-     5ea:	08 95       	ret
+ b7e:	8f ef       	ldi	r24, 0xFF	; 255
+ b80:	03 c0       	rjmp	.+6      	; 0xb88 <ejecutar_secuencias_D+0x4a>
         }
         else if (indice_led <= 0) {
-     5ec:	18 16       	cp	r1, r24
-     5ee:	1c f0       	brlt	.+6      	; 0x5f6 <ejecutar_secuencias_D+0x54>
+ b82:	18 16       	cp	r1, r24
+ b84:	1c f0       	brlt	.+6      	; 0xb8c <ejecutar_secuencias_D+0x4e>
             direccion = 1;  // Chocó abajo, ahora sube
-     5f0:	81 e0       	ldi	r24, 0x01	; 1
-     5f2:	80 93 03 01 	sts	0x0103, r24	; 0x800103 <direccion>
-     5f6:	08 95       	ret
+ b86:	81 e0       	ldi	r24, 0x01	; 1
+ b88:	80 93 03 01 	sts	0x0103, r24	; 0x800103 <direccion>
+ b8c:	08 95       	ret
 
-000005f8 <ejecutar_secuencias_NEO>:
+00000b8e <ejecutar_secuencias_NEO>:
+	"nop\n" "nop\n" "nop\n" "nop\n"
+	"nop\n"
 	);
 }
 
 void ejecutar_secuencias_NEO(){
+ b8e:	cf 93       	push	r28
+ b90:	df 93       	push	r29
 	
 	if (modo_Neo==0) {
-     5f8:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <modo_Neo>
-     5fc:	81 11       	cpse	r24, r1
-     5fe:	0c 94 3e 0d 	jmp	0x1a7c	; 0x1a7c <__stack+0x117d>
+ b92:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <modo_Neo>
+ b96:	81 11       	cpse	r24, r1
+ b98:	2b c0       	rjmp	.+86     	; 0xbf0 <ejecutar_secuencias_NEO+0x62>
 		// Si la secuencia anterior es azul, ahora mandamos rojo
 		if (color_ant==0) {
-     602:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <__data_end>
-     606:	81 11       	cpse	r24, r1
-     608:	c0 c2       	rjmp	.+1408   	; 0xb8a <__stack+0x28b>
+ b9a:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <__data_end>
+ b9e:	81 11       	cpse	r24, r1
+ ba0:	14 c0       	rjmp	.+40     	; 0xbca <ejecutar_secuencias_NEO+0x3c>
 			mandar_vacio(); mandar_rojo();
-     60a:	0e 94 81 00 	call	0x102	; 0x102 <mandar_vacio>
-}
-
-// --- LED ROJO --- (G=0, R=255, B=0)
-static inline void mandar_rojo() {
-	// VERDE (0)
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     60e:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     612:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     616:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     61a:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     61e:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     622:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     626:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     62a:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     62e:	85 b1       	in	r24, 0x05	; 5
-     630:	81 60       	ori	r24, 0x01	; 1
-     632:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     648:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     64a:	85 b1       	in	r24, 0x05	; 5
-     64c:	8e 7f       	andi	r24, 0xFE	; 254
-     64e:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     658:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     65a:	85 b1       	in	r24, 0x05	; 5
-     65c:	81 60       	ori	r24, 0x01	; 1
-     65e:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     674:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     676:	85 b1       	in	r24, 0x05	; 5
-     678:	8e 7f       	andi	r24, 0xFE	; 254
-     67a:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     684:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     686:	85 b1       	in	r24, 0x05	; 5
-     688:	81 60       	ori	r24, 0x01	; 1
-     68a:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     6a0:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     6a2:	85 b1       	in	r24, 0x05	; 5
-     6a4:	8e 7f       	andi	r24, 0xFE	; 254
-     6a6:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     6b0:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     6b2:	85 b1       	in	r24, 0x05	; 5
-     6b4:	81 60       	ori	r24, 0x01	; 1
-     6b6:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     6cc:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     6ce:	85 b1       	in	r24, 0x05	; 5
-     6d0:	8e 7f       	andi	r24, 0xFE	; 254
-     6d2:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     6dc:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     6de:	85 b1       	in	r24, 0x05	; 5
-     6e0:	81 60       	ori	r24, 0x01	; 1
-     6e2:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     6f8:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     6fa:	85 b1       	in	r24, 0x05	; 5
-     6fc:	8e 7f       	andi	r24, 0xFE	; 254
-     6fe:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     708:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     70a:	85 b1       	in	r24, 0x05	; 5
-     70c:	81 60       	ori	r24, 0x01	; 1
-     70e:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     724:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     726:	85 b1       	in	r24, 0x05	; 5
-     728:	8e 7f       	andi	r24, 0xFE	; 254
-     72a:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     734:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     736:	85 b1       	in	r24, 0x05	; 5
-     738:	81 60       	ori	r24, 0x01	; 1
-     73a:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     750:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     752:	85 b1       	in	r24, 0x05	; 5
-     754:	8e 7f       	andi	r24, 0xFE	; 254
-     756:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     760:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     762:	85 b1       	in	r24, 0x05	; 5
-     764:	81 60       	ori	r24, 0x01	; 1
-     766:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     77c:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     77e:	85 b1       	in	r24, 0x05	; 5
-     780:	8e 7f       	andi	r24, 0xFE	; 254
-     782:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     78c:	00 00       	nop
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-	// ROJO (255)
-	mandar_uno(); mandar_uno(); mandar_uno(); mandar_uno();
-	mandar_uno(); mandar_uno(); mandar_uno(); mandar_uno();
-	// AZUL (0)
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     78e:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     792:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     796:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     79a:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     79e:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     7a2:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     7a6:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     7aa:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	
-	if (modo_Neo==0) {
-		// Si la secuencia anterior es azul, ahora mandamos rojo
-		if (color_ant==0) {
+ ba2:	0e 94 b5 03 	call	0x76a	; 0x76a <mandar_vacio>
+ ba6:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_rojo>
 			mandar_vacio(); mandar_rojo();
+ baa:	0e 94 b5 03 	call	0x76a	; 0x76a <mandar_vacio>
+ bae:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_rojo>
 			mandar_vacio(); mandar_rojo();
-     7ae:	0e 94 81 00 	call	0x102	; 0x102 <mandar_vacio>
-}
-
-// --- LED ROJO --- (G=0, R=255, B=0)
-static inline void mandar_rojo() {
-	// VERDE (0)
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     7b2:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     7b6:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     7ba:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     7be:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     7c2:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     7c6:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     7ca:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     7ce:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	// ROJO (255)
-	mandar_uno(); mandar_uno(); mandar_uno(); mandar_uno();
-     7d2:	0e 94 6a 00 	call	0xd4	; 0xd4 <mandar_uno>
-     7d6:	0e 94 6a 00 	call	0xd4	; 0xd4 <mandar_uno>
-     7da:	0e 94 6a 00 	call	0xd4	; 0xd4 <mandar_uno>
-     7de:	0e 94 6a 00 	call	0xd4	; 0xd4 <mandar_uno>
-	mandar_uno(); mandar_uno(); mandar_uno(); mandar_uno();
-     7e2:	0e 94 6a 00 	call	0xd4	; 0xd4 <mandar_uno>
-     7e6:	0e 94 6a 00 	call	0xd4	; 0xd4 <mandar_uno>
-     7ea:	0e 94 6a 00 	call	0xd4	; 0xd4 <mandar_uno>
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     7ee:	85 b1       	in	r24, 0x05	; 5
-     7f0:	81 60       	ori	r24, 0x01	; 1
-     7f2:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     808:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     80a:	85 b1       	in	r24, 0x05	; 5
-     80c:	8e 7f       	andi	r24, 0xFE	; 254
-     80e:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     818:	00 00       	nop
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-	// ROJO (255)
-	mandar_uno(); mandar_uno(); mandar_uno(); mandar_uno();
-	mandar_uno(); mandar_uno(); mandar_uno(); mandar_uno();
-	// AZUL (0)
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     81a:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     81e:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     822:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     826:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     82a:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     82e:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     832:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     836:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	if (modo_Neo==0) {
-		// Si la secuencia anterior es azul, ahora mandamos rojo
-		if (color_ant==0) {
+ bb2:	0e 94 b5 03 	call	0x76a	; 0x76a <mandar_vacio>
+ bb6:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_rojo>
 			mandar_vacio(); mandar_rojo();
-			mandar_vacio(); mandar_rojo();
-			mandar_vacio(); mandar_rojo();
-     83a:	0e 94 81 00 	call	0x102	; 0x102 <mandar_vacio>
-}
-
-// --- LED ROJO --- (G=0, R=255, B=0)
-static inline void mandar_rojo() {
-	// VERDE (0)
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     83e:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     842:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     846:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     84a:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     84e:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     852:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     856:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     85a:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     85e:	85 b1       	in	r24, 0x05	; 5
-     860:	81 60       	ori	r24, 0x01	; 1
-     862:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     878:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     87a:	85 b1       	in	r24, 0x05	; 5
-     87c:	8e 7f       	andi	r24, 0xFE	; 254
-     87e:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     888:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     88a:	85 b1       	in	r24, 0x05	; 5
-     88c:	81 60       	ori	r24, 0x01	; 1
-     88e:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     8a4:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     8a6:	85 b1       	in	r24, 0x05	; 5
-     8a8:	8e 7f       	andi	r24, 0xFE	; 254
-     8aa:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     8b4:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     8b6:	85 b1       	in	r24, 0x05	; 5
-     8b8:	81 60       	ori	r24, 0x01	; 1
-     8ba:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     8d0:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     8d2:	85 b1       	in	r24, 0x05	; 5
-     8d4:	8e 7f       	andi	r24, 0xFE	; 254
-     8d6:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     8e0:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     8e2:	85 b1       	in	r24, 0x05	; 5
-     8e4:	81 60       	ori	r24, 0x01	; 1
-     8e6:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     8fc:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     8fe:	85 b1       	in	r24, 0x05	; 5
-     900:	8e 7f       	andi	r24, 0xFE	; 254
-     902:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     90c:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     90e:	85 b1       	in	r24, 0x05	; 5
-     910:	81 60       	ori	r24, 0x01	; 1
-     912:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     928:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     92a:	85 b1       	in	r24, 0x05	; 5
-     92c:	8e 7f       	andi	r24, 0xFE	; 254
-     92e:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     938:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     93a:	85 b1       	in	r24, 0x05	; 5
-     93c:	81 60       	ori	r24, 0x01	; 1
-     93e:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     954:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     956:	85 b1       	in	r24, 0x05	; 5
-     958:	8e 7f       	andi	r24, 0xFE	; 254
-     95a:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     964:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     966:	85 b1       	in	r24, 0x05	; 5
-     968:	81 60       	ori	r24, 0x01	; 1
-     96a:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     980:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     982:	85 b1       	in	r24, 0x05	; 5
-     984:	8e 7f       	andi	r24, 0xFE	; 254
-     986:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     990:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     992:	85 b1       	in	r24, 0x05	; 5
-     994:	81 60       	ori	r24, 0x01	; 1
-     996:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     9ac:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     9ae:	85 b1       	in	r24, 0x05	; 5
-     9b0:	8e 7f       	andi	r24, 0xFE	; 254
-     9b2:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     9bc:	00 00       	nop
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-	// ROJO (255)
-	mandar_uno(); mandar_uno(); mandar_uno(); mandar_uno();
-	mandar_uno(); mandar_uno(); mandar_uno(); mandar_uno();
-	// AZUL (0)
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     9be:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     9c2:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     9c6:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     9ca:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     9ce:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     9d2:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     9d6:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     9da:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-		// Si la secuencia anterior es azul, ahora mandamos rojo
-		if (color_ant==0) {
-			mandar_vacio(); mandar_rojo();
-			mandar_vacio(); mandar_rojo();
-			mandar_vacio(); mandar_rojo();
-			mandar_vacio(); mandar_rojo();
-     9de:	0e 94 81 00 	call	0x102	; 0x102 <mandar_vacio>
-}
-
-// --- LED ROJO --- (G=0, R=255, B=0)
-static inline void mandar_rojo() {
-	// VERDE (0)
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     9e2:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     9e6:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     9ea:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     9ee:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     9f2:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     9f6:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     9fa:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     9fe:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     a02:	85 b1       	in	r24, 0x05	; 5
-     a04:	81 60       	ori	r24, 0x01	; 1
-     a06:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     a1c:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     a1e:	85 b1       	in	r24, 0x05	; 5
-     a20:	8e 7f       	andi	r24, 0xFE	; 254
-     a22:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     a2c:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     a2e:	85 b1       	in	r24, 0x05	; 5
-     a30:	81 60       	ori	r24, 0x01	; 1
-     a32:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     a48:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     a4a:	85 b1       	in	r24, 0x05	; 5
-     a4c:	8e 7f       	andi	r24, 0xFE	; 254
-     a4e:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     a58:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     a5a:	85 b1       	in	r24, 0x05	; 5
-     a5c:	81 60       	ori	r24, 0x01	; 1
-     a5e:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     a74:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     a76:	85 b1       	in	r24, 0x05	; 5
-     a78:	8e 7f       	andi	r24, 0xFE	; 254
-     a7a:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     a84:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     a86:	85 b1       	in	r24, 0x05	; 5
-     a88:	81 60       	ori	r24, 0x01	; 1
-     a8a:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     aa0:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     aa2:	85 b1       	in	r24, 0x05	; 5
-     aa4:	8e 7f       	andi	r24, 0xFE	; 254
-     aa6:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     ab0:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     ab2:	85 b1       	in	r24, 0x05	; 5
-     ab4:	81 60       	ori	r24, 0x01	; 1
-     ab6:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     acc:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     ace:	85 b1       	in	r24, 0x05	; 5
-     ad0:	8e 7f       	andi	r24, 0xFE	; 254
-     ad2:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     adc:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     ade:	85 b1       	in	r24, 0x05	; 5
-     ae0:	81 60       	ori	r24, 0x01	; 1
-     ae2:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     af8:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     afa:	85 b1       	in	r24, 0x05	; 5
-     afc:	8e 7f       	andi	r24, 0xFE	; 254
-     afe:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     b08:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     b0a:	85 b1       	in	r24, 0x05	; 5
-     b0c:	81 60       	ori	r24, 0x01	; 1
-     b0e:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     b24:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     b26:	85 b1       	in	r24, 0x05	; 5
-     b28:	8e 7f       	andi	r24, 0xFE	; 254
-     b2a:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     b34:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     b36:	85 b1       	in	r24, 0x05	; 5
-     b38:	81 60       	ori	r24, 0x01	; 1
-     b3a:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     b50:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     b52:	85 b1       	in	r24, 0x05	; 5
-     b54:	8e 7f       	andi	r24, 0xFE	; 254
-     b56:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     b60:	00 00       	nop
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-	// ROJO (255)
-	mandar_uno(); mandar_uno(); mandar_uno(); mandar_uno();
-	mandar_uno(); mandar_uno(); mandar_uno(); mandar_uno();
-	// AZUL (0)
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     b62:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     b66:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     b6a:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     b6e:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     b72:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     b76:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     b7a:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     b7e:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-		if (color_ant==0) {
-			mandar_vacio(); mandar_rojo();
-			mandar_vacio(); mandar_rojo();
-			mandar_vacio(); mandar_rojo();
-			mandar_vacio(); mandar_rojo();
+ bba:	0e 94 b5 03 	call	0x76a	; 0x76a <mandar_vacio>
+ bbe:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_rojo>
 			color_ant=1;
-     b82:	81 e0       	ldi	r24, 0x01	; 1
-     b84:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <__data_end>
-     b88:	08 95       	ret
-}
-
-// --- LED AZUL --- (G=0, R=0, B=255)
-static inline void mandar_azul() {
-	// VERDE (0)
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     b8a:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     b8e:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     b92:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     b96:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     b9a:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     b9e:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     ba2:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     ba6:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	// ROJO (0)
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     baa:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     bae:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     bb2:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     bb6:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     bba:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     bbe:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     bc2:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     bc6:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     bca:	85 b1       	in	r24, 0x05	; 5
-     bcc:	81 60       	ori	r24, 0x01	; 1
-     bce:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     be4:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     be6:	85 b1       	in	r24, 0x05	; 5
-     be8:	8e 7f       	andi	r24, 0xFE	; 254
-     bea:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     bf4:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     bf6:	85 b1       	in	r24, 0x05	; 5
-     bf8:	81 60       	ori	r24, 0x01	; 1
-     bfa:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     c10:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     c12:	85 b1       	in	r24, 0x05	; 5
-     c14:	8e 7f       	andi	r24, 0xFE	; 254
-     c16:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     c20:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     c22:	85 b1       	in	r24, 0x05	; 5
-     c24:	81 60       	ori	r24, 0x01	; 1
-     c26:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     c3c:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     c3e:	85 b1       	in	r24, 0x05	; 5
-     c40:	8e 7f       	andi	r24, 0xFE	; 254
-     c42:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     c4c:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     c4e:	85 b1       	in	r24, 0x05	; 5
-     c50:	81 60       	ori	r24, 0x01	; 1
-     c52:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     c68:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     c6a:	85 b1       	in	r24, 0x05	; 5
-     c6c:	8e 7f       	andi	r24, 0xFE	; 254
-     c6e:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     c78:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     c7a:	85 b1       	in	r24, 0x05	; 5
-     c7c:	81 60       	ori	r24, 0x01	; 1
-     c7e:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     c94:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     c96:	85 b1       	in	r24, 0x05	; 5
-     c98:	8e 7f       	andi	r24, 0xFE	; 254
-     c9a:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     ca4:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     ca6:	85 b1       	in	r24, 0x05	; 5
-     ca8:	81 60       	ori	r24, 0x01	; 1
-     caa:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     cc0:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     cc2:	85 b1       	in	r24, 0x05	; 5
-     cc4:	8e 7f       	andi	r24, 0xFE	; 254
-     cc6:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     cd0:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     cd2:	85 b1       	in	r24, 0x05	; 5
-     cd4:	81 60       	ori	r24, 0x01	; 1
-     cd6:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     cec:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     cee:	85 b1       	in	r24, 0x05	; 5
-     cf0:	8e 7f       	andi	r24, 0xFE	; 254
-     cf2:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     cfc:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     cfe:	85 b1       	in	r24, 0x05	; 5
-     d00:	81 60       	ori	r24, 0x01	; 1
-     d02:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     d18:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     d1a:	85 b1       	in	r24, 0x05	; 5
-     d1c:	8e 7f       	andi	r24, 0xFE	; 254
-     d1e:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     d28:	00 00       	nop
-			mandar_vacio(); mandar_rojo();
-			mandar_vacio(); mandar_rojo();
-			color_ant=1;
+ bc2:	81 e0       	ldi	r24, 0x01	; 1
+ bc4:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <__data_end>
+ bc8:	dd c1       	rjmp	.+954    	; 0xf84 <ejecutar_secuencias_NEO+0x3f6>
 			// Si la secuencia anterior es rojo, ahora mandamos azul
 			} else {
 			mandar_azul(); mandar_vacio();
-     d2a:	0e 94 81 00 	call	0x102	; 0x102 <mandar_vacio>
-}
-
-// --- LED AZUL --- (G=0, R=0, B=255)
-static inline void mandar_azul() {
-	// VERDE (0)
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     d2e:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     d32:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     d36:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     d3a:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     d3e:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     d42:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     d46:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     d4a:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	// ROJO (0)
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     d4e:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     d52:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     d56:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     d5a:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     d5e:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     d62:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     d66:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     d6a:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     d6e:	85 b1       	in	r24, 0x05	; 5
-     d70:	81 60       	ori	r24, 0x01	; 1
-     d72:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     d88:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     d8a:	85 b1       	in	r24, 0x05	; 5
-     d8c:	8e 7f       	andi	r24, 0xFE	; 254
-     d8e:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     d98:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     d9a:	85 b1       	in	r24, 0x05	; 5
-     d9c:	81 60       	ori	r24, 0x01	; 1
-     d9e:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     db4:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     db6:	85 b1       	in	r24, 0x05	; 5
-     db8:	8e 7f       	andi	r24, 0xFE	; 254
-     dba:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     dc4:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     dc6:	85 b1       	in	r24, 0x05	; 5
-     dc8:	81 60       	ori	r24, 0x01	; 1
-     dca:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     de0:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     de2:	85 b1       	in	r24, 0x05	; 5
-     de4:	8e 7f       	andi	r24, 0xFE	; 254
-     de6:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     df0:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     df2:	85 b1       	in	r24, 0x05	; 5
-     df4:	81 60       	ori	r24, 0x01	; 1
-     df6:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     e0c:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     e0e:	85 b1       	in	r24, 0x05	; 5
-     e10:	8e 7f       	andi	r24, 0xFE	; 254
-     e12:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     e1c:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     e1e:	85 b1       	in	r24, 0x05	; 5
-     e20:	81 60       	ori	r24, 0x01	; 1
-     e22:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     e38:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     e3a:	85 b1       	in	r24, 0x05	; 5
-     e3c:	8e 7f       	andi	r24, 0xFE	; 254
-     e3e:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     e48:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     e4a:	85 b1       	in	r24, 0x05	; 5
-     e4c:	81 60       	ori	r24, 0x01	; 1
-     e4e:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     e64:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     e66:	85 b1       	in	r24, 0x05	; 5
-     e68:	8e 7f       	andi	r24, 0xFE	; 254
-     e6a:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     e74:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     e76:	85 b1       	in	r24, 0x05	; 5
-     e78:	81 60       	ori	r24, 0x01	; 1
-     e7a:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     e90:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     e92:	85 b1       	in	r24, 0x05	; 5
-     e94:	8e 7f       	andi	r24, 0xFE	; 254
-     e96:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     ea0:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     ea2:	85 b1       	in	r24, 0x05	; 5
-     ea4:	81 60       	ori	r24, 0x01	; 1
-     ea6:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     ebc:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     ebe:	85 b1       	in	r24, 0x05	; 5
-     ec0:	8e 7f       	andi	r24, 0xFE	; 254
-     ec2:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     ecc:	00 00       	nop
-			mandar_vacio(); mandar_rojo();
-			color_ant=1;
-			// Si la secuencia anterior es rojo, ahora mandamos azul
-			} else {
+ bca:	0e 94 04 02 	call	0x408	; 0x408 <mandar_azul>
+ bce:	0e 94 b5 03 	call	0x76a	; 0x76a <mandar_vacio>
 			mandar_azul(); mandar_vacio();
+ bd2:	0e 94 04 02 	call	0x408	; 0x408 <mandar_azul>
+ bd6:	0e 94 b5 03 	call	0x76a	; 0x76a <mandar_vacio>
 			mandar_azul(); mandar_vacio();
-     ece:	0e 94 81 00 	call	0x102	; 0x102 <mandar_vacio>
-}
-
-// --- LED AZUL --- (G=0, R=0, B=255)
-static inline void mandar_azul() {
-	// VERDE (0)
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     ed2:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     ed6:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     eda:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     ede:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     ee2:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     ee6:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     eea:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     eee:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	// ROJO (0)
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     ef2:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     ef6:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     efa:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     efe:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-     f02:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     f06:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     f0a:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-     f0e:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     f12:	85 b1       	in	r24, 0x05	; 5
-     f14:	81 60       	ori	r24, 0x01	; 1
-     f16:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     f2c:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     f2e:	85 b1       	in	r24, 0x05	; 5
-     f30:	8e 7f       	andi	r24, 0xFE	; 254
-     f32:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     f3c:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     f3e:	85 b1       	in	r24, 0x05	; 5
-     f40:	81 60       	ori	r24, 0x01	; 1
-     f42:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     f58:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     f5a:	85 b1       	in	r24, 0x05	; 5
-     f5c:	8e 7f       	andi	r24, 0xFE	; 254
-     f5e:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     f68:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     f6a:	85 b1       	in	r24, 0x05	; 5
-     f6c:	81 60       	ori	r24, 0x01	; 1
-     f6e:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     f84:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     f86:	85 b1       	in	r24, 0x05	; 5
-     f88:	8e 7f       	andi	r24, 0xFE	; 254
-     f8a:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     f94:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     f96:	85 b1       	in	r24, 0x05	; 5
-     f98:	81 60       	ori	r24, 0x01	; 1
-     f9a:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     fb0:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     fb2:	85 b1       	in	r24, 0x05	; 5
-     fb4:	8e 7f       	andi	r24, 0xFE	; 254
-     fb6:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     fc0:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     fc2:	85 b1       	in	r24, 0x05	; 5
-     fc4:	81 60       	ori	r24, 0x01	; 1
-     fc6:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-     fdc:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-     fde:	85 b1       	in	r24, 0x05	; 5
-     fe0:	8e 7f       	andi	r24, 0xFE	; 254
-     fe2:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-     fec:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-     fee:	85 b1       	in	r24, 0x05	; 5
-     ff0:	81 60       	ori	r24, 0x01	; 1
-     ff2:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-    1008:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    100a:	85 b1       	in	r24, 0x05	; 5
-    100c:	8e 7f       	andi	r24, 0xFE	; 254
-    100e:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-    1018:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    101a:	85 b1       	in	r24, 0x05	; 5
-    101c:	81 60       	ori	r24, 0x01	; 1
-    101e:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-    1034:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    1036:	85 b1       	in	r24, 0x05	; 5
-    1038:	8e 7f       	andi	r24, 0xFE	; 254
-    103a:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-    1044:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    1046:	85 b1       	in	r24, 0x05	; 5
-    1048:	81 60       	ori	r24, 0x01	; 1
-    104a:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-    1060:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    1062:	85 b1       	in	r24, 0x05	; 5
-    1064:	8e 7f       	andi	r24, 0xFE	; 254
-    1066:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-    1070:	00 00       	nop
-			color_ant=1;
-			// Si la secuencia anterior es rojo, ahora mandamos azul
-			} else {
+ bda:	0e 94 04 02 	call	0x408	; 0x408 <mandar_azul>
+ bde:	0e 94 b5 03 	call	0x76a	; 0x76a <mandar_vacio>
 			mandar_azul(); mandar_vacio();
-			mandar_azul(); mandar_vacio();
-			mandar_azul(); mandar_vacio();
-    1072:	0e 94 81 00 	call	0x102	; 0x102 <mandar_vacio>
-}
-
-// --- LED AZUL --- (G=0, R=0, B=255)
-static inline void mandar_azul() {
-	// VERDE (0)
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-    1076:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-    107a:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-    107e:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-    1082:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-    1086:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-    108a:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-    108e:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-    1092:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	// ROJO (0)
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-    1096:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-    109a:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-    109e:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-    10a2:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	mandar_cero(); mandar_cero(); mandar_cero(); mandar_cero();
-    10a6:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-    10aa:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-    10ae:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-    10b2:	0e 94 53 00 	call	0xa6	; 0xa6 <mandar_cero>
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    10b6:	85 b1       	in	r24, 0x05	; 5
-    10b8:	81 60       	ori	r24, 0x01	; 1
-    10ba:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-    10d0:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    10d2:	85 b1       	in	r24, 0x05	; 5
-    10d4:	8e 7f       	andi	r24, 0xFE	; 254
-    10d6:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-    10e0:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    10e2:	85 b1       	in	r24, 0x05	; 5
-    10e4:	81 60       	ori	r24, 0x01	; 1
-    10e6:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-    10fc:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    10fe:	85 b1       	in	r24, 0x05	; 5
-    1100:	8e 7f       	andi	r24, 0xFE	; 254
-    1102:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-    110c:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    110e:	85 b1       	in	r24, 0x05	; 5
-    1110:	81 60       	ori	r24, 0x01	; 1
-    1112:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-    1128:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    112a:	85 b1       	in	r24, 0x05	; 5
-    112c:	8e 7f       	andi	r24, 0xFE	; 254
-    112e:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-    1138:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    113a:	85 b1       	in	r24, 0x05	; 5
-    113c:	81 60       	ori	r24, 0x01	; 1
-    113e:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-    1154:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    1156:	85 b1       	in	r24, 0x05	; 5
-    1158:	8e 7f       	andi	r24, 0xFE	; 254
-    115a:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-    1164:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    1166:	85 b1       	in	r24, 0x05	; 5
-    1168:	81 60       	ori	r24, 0x01	; 1
-    116a:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-    1180:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    1182:	85 b1       	in	r24, 0x05	; 5
-    1184:	8e 7f       	andi	r24, 0xFE	; 254
-    1186:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-    1190:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    1192:	85 b1       	in	r24, 0x05	; 5
-    1194:	81 60       	ori	r24, 0x01	; 1
-    1196:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-    11ac:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    11ae:	85 b1       	in	r24, 0x05	; 5
-    11b0:	8e 7f       	andi	r24, 0xFE	; 254
-    11b2:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-    11bc:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    11be:	85 b1       	in	r24, 0x05	; 5
-    11c0:	81 60       	ori	r24, 0x01	; 1
-    11c2:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-    11d8:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    11da:	85 b1       	in	r24, 0x05	; 5
-    11dc:	8e 7f       	andi	r24, 0xFE	; 254
-    11de:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-    11e8:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-}
-
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    11ea:	85 b1       	in	r24, 0x05	; 5
-    11ec:	81 60       	ori	r24, 0x01	; 1
-    11ee:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-    1204:	00 00       	nop
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	"nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    1206:	85 b1       	in	r24, 0x05	; 5
-    1208:	8e 7f       	andi	r24, 0xFE	; 254
-    120a:	85 b9       	out	0x05, r24	; 5
-	...
-	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
-	asm volatile(
-    1214:	00 00       	nop
-			// Si la secuencia anterior es rojo, ahora mandamos azul
-			} else {
-			mandar_azul(); mandar_vacio();
-			mandar_azul(); mandar_vacio();
-			mandar_azul(); mandar_vacio();
-			mandar_azul(); mandar_vacio();
-    1216:	0e 94 81 00 	call	0x102	; 0x102 <mandar_vacio>
+ be2:	0e 94 04 02 	call	0x408	; 0x408 <mandar_azul>
+ be6:	0e 94 b5 03 	call	0x76a	; 0x76a <mandar_vacio>
 			color_ant=0;
-    121a:	10 92 04 01 	sts	0x0104, r1	; 0x800104 <__data_end>
-    121e:	08 95       	ret
+ bea:	10 92 04 01 	sts	0x0104, r1	; 0x800104 <__data_end>
+ bee:	ca c1       	rjmp	.+916    	; 0xf84 <ejecutar_secuencias_NEO+0x3f6>
+ bf0:	c0 e0       	ldi	r28, 0x00	; 0
+ bf2:	d0 e0       	ldi	r29, 0x00	; 0
 		}
 	} else {
 		
 		// Recorremos los 8 LEDs de la tira (del 0 al 7)
 		for (uint8_t i = 0; i < 8; i++) {
 			if (i == pos_verde) {
-    1220:	48 2f       	mov	r20, r24
-    1222:	50 e0       	ldi	r21, 0x00	; 0
-    1224:	20 91 00 01 	lds	r18, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
-    1228:	02 2e       	mov	r0, r18
-    122a:	00 0c       	add	r0, r0
-    122c:	33 0b       	sbc	r19, r19
-    122e:	42 17       	cp	r20, r18
-    1230:	53 07       	cpc	r21, r19
-    1232:	09 f0       	breq	.+2      	; 0x1236 <__stack+0x937>
-    1234:	11 c2       	rjmp	.+1058   	; 0x1658 <__stack+0xd59>
+ bf4:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ bf8:	08 2e       	mov	r0, r24
+ bfa:	00 0c       	add	r0, r0
+ bfc:	99 0b       	sbc	r25, r25
+ bfe:	c8 17       	cp	r28, r24
+ c00:	d9 07       	cpc	r29, r25
+ c02:	09 f0       	breq	.+2      	; 0xc06 <ejecutar_secuencias_NEO+0x78>
+ c04:	b1 c1       	rjmp	.+866    	; 0xf68 <ejecutar_secuencias_NEO+0x3da>
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 }
 
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    1236:	95 b1       	in	r25, 0x05	; 5
-    1238:	91 60       	ori	r25, 0x01	; 1
-    123a:	95 b9       	out	0x05, r25	; 5
+static inline void __attribute__((always_inline)) mandar_uno() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ c06:	28 9a       	sbi	0x05, 0	; 5
 	...
 	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-    1250:	00 00       	nop
+	// T1H: Mantenemos en ALTO 11 ciclos más (Total 13 ciclos = 812 ns)
+	asm volatile (
+ c1c:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	"nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    1252:	95 b1       	in	r25, 0x05	; 5
-    1254:	9e 7f       	andi	r25, 0xFE	; 254
-    1256:	95 b9       	out	0x05, r25	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ c1e:	28 98       	cbi	0x05, 0	; 5
 	...
 	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
+	// T1L: Mantenemos en BAJO 5 ciclos más (Total 7 ciclos = 437 ns)
 	asm volatile(
-    1260:	00 00       	nop
+ c28:	00 00       	nop
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 }
 
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    1262:	95 b1       	in	r25, 0x05	; 5
-    1264:	91 60       	ori	r25, 0x01	; 1
-    1266:	95 b9       	out	0x05, r25	; 5
+static inline void __attribute__((always_inline)) mandar_uno() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ c2a:	28 9a       	sbi	0x05, 0	; 5
 	...
 	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-    127c:	00 00       	nop
+	// T1H: Mantenemos en ALTO 11 ciclos más (Total 13 ciclos = 812 ns)
+	asm volatile (
+ c40:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	"nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    127e:	95 b1       	in	r25, 0x05	; 5
-    1280:	9e 7f       	andi	r25, 0xFE	; 254
-    1282:	95 b9       	out	0x05, r25	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ c42:	28 98       	cbi	0x05, 0	; 5
 	...
 	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
+	// T1L: Mantenemos en BAJO 5 ciclos más (Total 7 ciclos = 437 ns)
 	asm volatile(
-    128c:	00 00       	nop
+ c4c:	00 00       	nop
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 }
 
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    128e:	95 b1       	in	r25, 0x05	; 5
-    1290:	91 60       	ori	r25, 0x01	; 1
-    1292:	95 b9       	out	0x05, r25	; 5
+static inline void __attribute__((always_inline)) mandar_uno() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ c4e:	28 9a       	sbi	0x05, 0	; 5
 	...
 	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-    12a8:	00 00       	nop
+	// T1H: Mantenemos en ALTO 11 ciclos más (Total 13 ciclos = 812 ns)
+	asm volatile (
+ c64:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	"nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    12aa:	95 b1       	in	r25, 0x05	; 5
-    12ac:	9e 7f       	andi	r25, 0xFE	; 254
-    12ae:	95 b9       	out	0x05, r25	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ c66:	28 98       	cbi	0x05, 0	; 5
 	...
 	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
+	// T1L: Mantenemos en BAJO 5 ciclos más (Total 7 ciclos = 437 ns)
 	asm volatile(
-    12b8:	00 00       	nop
+ c70:	00 00       	nop
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 }
 
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    12ba:	95 b1       	in	r25, 0x05	; 5
-    12bc:	91 60       	ori	r25, 0x01	; 1
-    12be:	95 b9       	out	0x05, r25	; 5
+static inline void __attribute__((always_inline)) mandar_uno() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ c72:	28 9a       	sbi	0x05, 0	; 5
 	...
 	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-    12d4:	00 00       	nop
+	// T1H: Mantenemos en ALTO 11 ciclos más (Total 13 ciclos = 812 ns)
+	asm volatile (
+ c88:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	"nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    12d6:	95 b1       	in	r25, 0x05	; 5
-    12d8:	9e 7f       	andi	r25, 0xFE	; 254
-    12da:	95 b9       	out	0x05, r25	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ c8a:	28 98       	cbi	0x05, 0	; 5
 	...
 	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
+	// T1L: Mantenemos en BAJO 5 ciclos más (Total 7 ciclos = 437 ns)
 	asm volatile(
-    12e4:	00 00       	nop
+ c94:	00 00       	nop
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 }
 
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    12e6:	95 b1       	in	r25, 0x05	; 5
-    12e8:	91 60       	ori	r25, 0x01	; 1
-    12ea:	95 b9       	out	0x05, r25	; 5
+static inline void __attribute__((always_inline)) mandar_uno() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ c96:	28 9a       	sbi	0x05, 0	; 5
 	...
 	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-    1300:	00 00       	nop
+	// T1H: Mantenemos en ALTO 11 ciclos más (Total 13 ciclos = 812 ns)
+	asm volatile (
+ cac:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	"nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    1302:	95 b1       	in	r25, 0x05	; 5
-    1304:	9e 7f       	andi	r25, 0xFE	; 254
-    1306:	95 b9       	out	0x05, r25	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ cae:	28 98       	cbi	0x05, 0	; 5
 	...
 	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
+	// T1L: Mantenemos en BAJO 5 ciclos más (Total 7 ciclos = 437 ns)
 	asm volatile(
-    1310:	00 00       	nop
+ cb8:	00 00       	nop
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 }
 
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    1312:	95 b1       	in	r25, 0x05	; 5
-    1314:	91 60       	ori	r25, 0x01	; 1
-    1316:	95 b9       	out	0x05, r25	; 5
+static inline void __attribute__((always_inline)) mandar_uno() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ cba:	28 9a       	sbi	0x05, 0	; 5
 	...
 	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-    132c:	00 00       	nop
+	// T1H: Mantenemos en ALTO 11 ciclos más (Total 13 ciclos = 812 ns)
+	asm volatile (
+ cd0:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	"nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    132e:	95 b1       	in	r25, 0x05	; 5
-    1330:	9e 7f       	andi	r25, 0xFE	; 254
-    1332:	95 b9       	out	0x05, r25	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ cd2:	28 98       	cbi	0x05, 0	; 5
 	...
 	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
+	// T1L: Mantenemos en BAJO 5 ciclos más (Total 7 ciclos = 437 ns)
 	asm volatile(
-    133c:	00 00       	nop
+ cdc:	00 00       	nop
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 }
 
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    133e:	95 b1       	in	r25, 0x05	; 5
-    1340:	91 60       	ori	r25, 0x01	; 1
-    1342:	95 b9       	out	0x05, r25	; 5
+static inline void __attribute__((always_inline)) mandar_uno() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ cde:	28 9a       	sbi	0x05, 0	; 5
 	...
 	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-    1358:	00 00       	nop
+	// T1H: Mantenemos en ALTO 11 ciclos más (Total 13 ciclos = 812 ns)
+	asm volatile (
+ cf4:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	"nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    135a:	95 b1       	in	r25, 0x05	; 5
-    135c:	9e 7f       	andi	r25, 0xFE	; 254
-    135e:	95 b9       	out	0x05, r25	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ cf6:	28 98       	cbi	0x05, 0	; 5
 	...
 	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
+	// T1L: Mantenemos en BAJO 5 ciclos más (Total 7 ciclos = 437 ns)
 	asm volatile(
-    1368:	00 00       	nop
+ d00:	00 00       	nop
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 }
 
-static inline void mandar_uno() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    136a:	95 b1       	in	r25, 0x05	; 5
-    136c:	91 60       	ori	r25, 0x01	; 1
-    136e:	95 b9       	out	0x05, r25	; 5
+static inline void __attribute__((always_inline)) mandar_uno() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ d02:	28 9a       	sbi	0x05, 0	; 5
 	...
 	
-	// T1H: Mantenemos en ALTO 11 ciclos más 
-	asm volatile ("nop\n" "nop\n" "nop\n" "nop\n"
-    1384:	00 00       	nop
+	// T1H: Mantenemos en ALTO 11 ciclos más (Total 13 ciclos = 812 ns)
+	asm volatile (
+ d18:	00 00       	nop
+	"nop\n" "nop\n" "nop\n" "nop\n"
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	"nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    1386:	95 b1       	in	r25, 0x05	; 5
-    1388:	9e 7f       	andi	r25, 0xFE	; 254
-    138a:	95 b9       	out	0x05, r25	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ d1a:	28 98       	cbi	0x05, 0	; 5
 	...
 	
-	// T1L: Mantenemos en BAJO 5 ciclos más 
+	// T1L: Mantenemos en BAJO 5 ciclos más (Total 7 ciclos = 437 ns)
 	asm volatile(
-    1394:	00 00       	nop
+ d24:	00 00       	nop
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    1396:	95 b1       	in	r25, 0x05	; 5
-    1398:	91 60       	ori	r25, 0x01	; 1
-    139a:	95 b9       	out	0x05, r25	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ d26:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    13a4:	95 b1       	in	r25, 0x05	; 5
-    13a6:	9e 7f       	andi	r25, 0xFE	; 254
-    13a8:	95 b9       	out	0x05, r25	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ d30:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    13c2:	95 b1       	in	r25, 0x05	; 5
-    13c4:	91 60       	ori	r25, 0x01	; 1
-    13c6:	95 b9       	out	0x05, r25	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ d4a:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    13d0:	95 b1       	in	r25, 0x05	; 5
-    13d2:	9e 7f       	andi	r25, 0xFE	; 254
-    13d4:	95 b9       	out	0x05, r25	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ d54:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    13ee:	95 b1       	in	r25, 0x05	; 5
-    13f0:	91 60       	ori	r25, 0x01	; 1
-    13f2:	95 b9       	out	0x05, r25	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ d6e:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    13fc:	95 b1       	in	r25, 0x05	; 5
-    13fe:	9e 7f       	andi	r25, 0xFE	; 254
-    1400:	95 b9       	out	0x05, r25	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ d78:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    141a:	95 b1       	in	r25, 0x05	; 5
-    141c:	91 60       	ori	r25, 0x01	; 1
-    141e:	95 b9       	out	0x05, r25	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ d92:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    1428:	95 b1       	in	r25, 0x05	; 5
-    142a:	9e 7f       	andi	r25, 0xFE	; 254
-    142c:	95 b9       	out	0x05, r25	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ d9c:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    1446:	95 b1       	in	r25, 0x05	; 5
-    1448:	91 60       	ori	r25, 0x01	; 1
-    144a:	95 b9       	out	0x05, r25	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ db6:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    1454:	95 b1       	in	r25, 0x05	; 5
-    1456:	9e 7f       	andi	r25, 0xFE	; 254
-    1458:	95 b9       	out	0x05, r25	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ dc0:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    1472:	95 b1       	in	r25, 0x05	; 5
-    1474:	91 60       	ori	r25, 0x01	; 1
-    1476:	95 b9       	out	0x05, r25	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ dda:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    1480:	95 b1       	in	r25, 0x05	; 5
-    1482:	9e 7f       	andi	r25, 0xFE	; 254
-    1484:	95 b9       	out	0x05, r25	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ de4:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    149e:	95 b1       	in	r25, 0x05	; 5
-    14a0:	91 60       	ori	r25, 0x01	; 1
-    14a2:	95 b9       	out	0x05, r25	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ dfe:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    14ac:	95 b1       	in	r25, 0x05	; 5
-    14ae:	9e 7f       	andi	r25, 0xFE	; 254
-    14b0:	95 b9       	out	0x05, r25	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ e08:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    14ca:	95 b1       	in	r25, 0x05	; 5
-    14cc:	91 60       	ori	r25, 0x01	; 1
-    14ce:	95 b9       	out	0x05, r25	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ e22:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    14d8:	95 b1       	in	r25, 0x05	; 5
-    14da:	9e 7f       	andi	r25, 0xFE	; 254
-    14dc:	95 b9       	out	0x05, r25	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ e2c:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    14f6:	95 b1       	in	r25, 0x05	; 5
-    14f8:	91 60       	ori	r25, 0x01	; 1
-    14fa:	95 b9       	out	0x05, r25	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ e46:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    1504:	95 b1       	in	r25, 0x05	; 5
-    1506:	9e 7f       	andi	r25, 0xFE	; 254
-    1508:	95 b9       	out	0x05, r25	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ e50:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    1522:	95 b1       	in	r25, 0x05	; 5
-    1524:	91 60       	ori	r25, 0x01	; 1
-    1526:	95 b9       	out	0x05, r25	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ e6a:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    1530:	95 b1       	in	r25, 0x05	; 5
-    1532:	9e 7f       	andi	r25, 0xFE	; 254
-    1534:	95 b9       	out	0x05, r25	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ e74:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    154e:	95 b1       	in	r25, 0x05	; 5
-    1550:	91 60       	ori	r25, 0x01	; 1
-    1552:	95 b9       	out	0x05, r25	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ e8e:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    155c:	95 b1       	in	r25, 0x05	; 5
-    155e:	9e 7f       	andi	r25, 0xFE	; 254
-    1560:	95 b9       	out	0x05, r25	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ e98:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    157a:	95 b1       	in	r25, 0x05	; 5
-    157c:	91 60       	ori	r25, 0x01	; 1
-    157e:	95 b9       	out	0x05, r25	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ eb2:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    1588:	95 b1       	in	r25, 0x05	; 5
-    158a:	9e 7f       	andi	r25, 0xFE	; 254
-    158c:	95 b9       	out	0x05, r25	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ ebc:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    15a6:	95 b1       	in	r25, 0x05	; 5
-    15a8:	91 60       	ori	r25, 0x01	; 1
-    15aa:	95 b9       	out	0x05, r25	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ ed6:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    15b4:	95 b1       	in	r25, 0x05	; 5
-    15b6:	9e 7f       	andi	r25, 0xFE	; 254
-    15b8:	95 b9       	out	0x05, r25	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ ee0:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    15d2:	95 b1       	in	r25, 0x05	; 5
-    15d4:	91 60       	ori	r25, 0x01	; 1
-    15d6:	95 b9       	out	0x05, r25	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ efa:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    15e0:	95 b1       	in	r25, 0x05	; 5
-    15e2:	9e 7f       	andi	r25, 0xFE	; 254
-    15e4:	95 b9       	out	0x05, r25	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ f04:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    15fe:	95 b1       	in	r25, 0x05	; 5
-    1600:	91 60       	ori	r25, 0x01	; 1
-    1602:	95 b9       	out	0x05, r25	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ f1e:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    160c:	95 b1       	in	r25, 0x05	; 5
-    160e:	9e 7f       	andi	r25, 0xFE	; 254
-    1610:	95 b9       	out	0x05, r25	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ f28:	28 98       	cbi	0x05, 0	; 5
 	...
         }
     }
 }
 
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    162a:	95 b1       	in	r25, 0x05	; 5
-    162c:	91 60       	ori	r25, 0x01	; 1
-    162e:	95 b9       	out	0x05, r25	; 5
+static inline void __attribute__((always_inline)) mandar_cero() {
+	PORTB |= (1 << PB0);   // Pin en ALTO (2 ciclos gracias al sbi)
+ f42:	28 9a       	sbi	0x05, 0	; 5
 	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
+	// T0H: Mantenemos en ALTO 4 ciclos más (Total 6 ciclos = 375 ns)
 	asm volatile(
 	"nop\n" "nop\n" "nop\n" "nop\n"
 	);
 	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    1638:	95 b1       	in	r25, 0x05	; 5
-    163a:	9e 7f       	andi	r25, 0xFE	; 254
-    163c:	95 b9       	out	0x05, r25	; 5
+	PORTB &= ~(1 << PB0);  // Pin en BAJO (2 ciclos gracias al cbi)
+ f4c:	28 98       	cbi	0x05, 0	; 5
 	...
 	
-	// T0L: Mantenemos en BAJO 12 ciclos más 
+	// T0L: Mantenemos en BAJO 12 ciclos más (Total 14 ciclos = 875 ns)
 	asm volatile(
-    1656:	10 c2       	rjmp	.+1056   	; 0x1a78 <__stack+0x1179>
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    1658:	95 b1       	in	r25, 0x05	; 5
-    165a:	91 60       	ori	r25, 0x01	; 1
-    165c:	95 b9       	out	0x05, r25	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    1666:	95 b1       	in	r25, 0x05	; 5
-    1668:	9e 7f       	andi	r25, 0xFE	; 254
-    166a:	95 b9       	out	0x05, r25	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    1684:	95 b1       	in	r25, 0x05	; 5
-    1686:	91 60       	ori	r25, 0x01	; 1
-    1688:	95 b9       	out	0x05, r25	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    1692:	95 b1       	in	r25, 0x05	; 5
-    1694:	9e 7f       	andi	r25, 0xFE	; 254
-    1696:	95 b9       	out	0x05, r25	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    16b0:	95 b1       	in	r25, 0x05	; 5
-    16b2:	91 60       	ori	r25, 0x01	; 1
-    16b4:	95 b9       	out	0x05, r25	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    16be:	95 b1       	in	r25, 0x05	; 5
-    16c0:	9e 7f       	andi	r25, 0xFE	; 254
-    16c2:	95 b9       	out	0x05, r25	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    16dc:	95 b1       	in	r25, 0x05	; 5
-    16de:	91 60       	ori	r25, 0x01	; 1
-    16e0:	95 b9       	out	0x05, r25	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    16ea:	95 b1       	in	r25, 0x05	; 5
-    16ec:	9e 7f       	andi	r25, 0xFE	; 254
-    16ee:	95 b9       	out	0x05, r25	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    1708:	95 b1       	in	r25, 0x05	; 5
-    170a:	91 60       	ori	r25, 0x01	; 1
-    170c:	95 b9       	out	0x05, r25	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    1716:	95 b1       	in	r25, 0x05	; 5
-    1718:	9e 7f       	andi	r25, 0xFE	; 254
-    171a:	95 b9       	out	0x05, r25	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    1734:	95 b1       	in	r25, 0x05	; 5
-    1736:	91 60       	ori	r25, 0x01	; 1
-    1738:	95 b9       	out	0x05, r25	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    1742:	95 b1       	in	r25, 0x05	; 5
-    1744:	9e 7f       	andi	r25, 0xFE	; 254
-    1746:	95 b9       	out	0x05, r25	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    1760:	95 b1       	in	r25, 0x05	; 5
-    1762:	91 60       	ori	r25, 0x01	; 1
-    1764:	95 b9       	out	0x05, r25	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    176e:	95 b1       	in	r25, 0x05	; 5
-    1770:	9e 7f       	andi	r25, 0xFE	; 254
-    1772:	95 b9       	out	0x05, r25	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    178c:	95 b1       	in	r25, 0x05	; 5
-    178e:	91 60       	ori	r25, 0x01	; 1
-    1790:	95 b9       	out	0x05, r25	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    179a:	95 b1       	in	r25, 0x05	; 5
-    179c:	9e 7f       	andi	r25, 0xFE	; 254
-    179e:	95 b9       	out	0x05, r25	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    17b8:	95 b1       	in	r25, 0x05	; 5
-    17ba:	91 60       	ori	r25, 0x01	; 1
-    17bc:	95 b9       	out	0x05, r25	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    17c6:	95 b1       	in	r25, 0x05	; 5
-    17c8:	9e 7f       	andi	r25, 0xFE	; 254
-    17ca:	95 b9       	out	0x05, r25	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    17e4:	95 b1       	in	r25, 0x05	; 5
-    17e6:	91 60       	ori	r25, 0x01	; 1
-    17e8:	95 b9       	out	0x05, r25	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    17f2:	95 b1       	in	r25, 0x05	; 5
-    17f4:	9e 7f       	andi	r25, 0xFE	; 254
-    17f6:	95 b9       	out	0x05, r25	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    1810:	95 b1       	in	r25, 0x05	; 5
-    1812:	91 60       	ori	r25, 0x01	; 1
-    1814:	95 b9       	out	0x05, r25	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    181e:	95 b1       	in	r25, 0x05	; 5
-    1820:	9e 7f       	andi	r25, 0xFE	; 254
-    1822:	95 b9       	out	0x05, r25	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    183c:	95 b1       	in	r25, 0x05	; 5
-    183e:	91 60       	ori	r25, 0x01	; 1
-    1840:	95 b9       	out	0x05, r25	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    184a:	95 b1       	in	r25, 0x05	; 5
-    184c:	9e 7f       	andi	r25, 0xFE	; 254
-    184e:	95 b9       	out	0x05, r25	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    1868:	95 b1       	in	r25, 0x05	; 5
-    186a:	91 60       	ori	r25, 0x01	; 1
-    186c:	95 b9       	out	0x05, r25	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    1876:	95 b1       	in	r25, 0x05	; 5
-    1878:	9e 7f       	andi	r25, 0xFE	; 254
-    187a:	95 b9       	out	0x05, r25	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    1894:	95 b1       	in	r25, 0x05	; 5
-    1896:	91 60       	ori	r25, 0x01	; 1
-    1898:	95 b9       	out	0x05, r25	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    18a2:	95 b1       	in	r25, 0x05	; 5
-    18a4:	9e 7f       	andi	r25, 0xFE	; 254
-    18a6:	95 b9       	out	0x05, r25	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    18c0:	95 b1       	in	r25, 0x05	; 5
-    18c2:	91 60       	ori	r25, 0x01	; 1
-    18c4:	95 b9       	out	0x05, r25	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    18ce:	95 b1       	in	r25, 0x05	; 5
-    18d0:	9e 7f       	andi	r25, 0xFE	; 254
-    18d2:	95 b9       	out	0x05, r25	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    18ec:	95 b1       	in	r25, 0x05	; 5
-    18ee:	91 60       	ori	r25, 0x01	; 1
-    18f0:	95 b9       	out	0x05, r25	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    18fa:	95 b1       	in	r25, 0x05	; 5
-    18fc:	9e 7f       	andi	r25, 0xFE	; 254
-    18fe:	95 b9       	out	0x05, r25	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    1918:	95 b1       	in	r25, 0x05	; 5
-    191a:	91 60       	ori	r25, 0x01	; 1
-    191c:	95 b9       	out	0x05, r25	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    1926:	95 b1       	in	r25, 0x05	; 5
-    1928:	9e 7f       	andi	r25, 0xFE	; 254
-    192a:	95 b9       	out	0x05, r25	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    1944:	95 b1       	in	r25, 0x05	; 5
-    1946:	91 60       	ori	r25, 0x01	; 1
-    1948:	95 b9       	out	0x05, r25	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    1952:	95 b1       	in	r25, 0x05	; 5
-    1954:	9e 7f       	andi	r25, 0xFE	; 254
-    1956:	95 b9       	out	0x05, r25	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    1970:	95 b1       	in	r25, 0x05	; 5
-    1972:	91 60       	ori	r25, 0x01	; 1
-    1974:	95 b9       	out	0x05, r25	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    197e:	95 b1       	in	r25, 0x05	; 5
-    1980:	9e 7f       	andi	r25, 0xFE	; 254
-    1982:	95 b9       	out	0x05, r25	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    199c:	95 b1       	in	r25, 0x05	; 5
-    199e:	91 60       	ori	r25, 0x01	; 1
-    19a0:	95 b9       	out	0x05, r25	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    19aa:	95 b1       	in	r25, 0x05	; 5
-    19ac:	9e 7f       	andi	r25, 0xFE	; 254
-    19ae:	95 b9       	out	0x05, r25	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    19c8:	95 b1       	in	r25, 0x05	; 5
-    19ca:	91 60       	ori	r25, 0x01	; 1
-    19cc:	95 b9       	out	0x05, r25	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    19d6:	95 b1       	in	r25, 0x05	; 5
-    19d8:	9e 7f       	andi	r25, 0xFE	; 254
-    19da:	95 b9       	out	0x05, r25	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    19f4:	95 b1       	in	r25, 0x05	; 5
-    19f6:	91 60       	ori	r25, 0x01	; 1
-    19f8:	95 b9       	out	0x05, r25	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    1a02:	95 b1       	in	r25, 0x05	; 5
-    1a04:	9e 7f       	andi	r25, 0xFE	; 254
-    1a06:	95 b9       	out	0x05, r25	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    1a20:	95 b1       	in	r25, 0x05	; 5
-    1a22:	91 60       	ori	r25, 0x01	; 1
-    1a24:	95 b9       	out	0x05, r25	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    1a2e:	95 b1       	in	r25, 0x05	; 5
-    1a30:	9e 7f       	andi	r25, 0xFE	; 254
-    1a32:	95 b9       	out	0x05, r25	; 5
-	...
-        }
-    }
-}
-
-static inline void mandar_cero() {
-	PORTB |= (1 << PB0);   // Pin en ALTO (3 ciclos)
-    1a4c:	95 b1       	in	r25, 0x05	; 5
-    1a4e:	91 60       	ori	r25, 0x01	; 1
-    1a50:	95 b9       	out	0x05, r25	; 5
-	...
-	// T0H: Mantenemos en ALTO 4 ciclos más
-	asm volatile(
-	"nop\n" "nop\n" "nop\n" "nop\n"
-	);
-	
-	PORTB &= ~(1 << PB0);  // Pin en BAJO (3 ciclos)
-    1a5a:	95 b1       	in	r25, 0x05	; 5
-    1a5c:	9e 7f       	andi	r25, 0xFE	; 254
-    1a5e:	95 b9       	out	0x05, r25	; 5
-	...
+ f66:	02 c0       	rjmp	.+4      	; 0xf6c <ejecutar_secuencias_NEO+0x3de>
+		// Recorremos los 8 LEDs de la tira (del 0 al 7)
+		for (uint8_t i = 0; i < 8; i++) {
+			if (i == pos_verde) {
+				mandar_verde(); // Si es la posición actual, prende verde
+				} else {
+				mandar_vacio(); // Si no, lo manda apagado
+ f68:	0e 94 b5 03 	call	0x76a	; 0x76a <mandar_vacio>
+ f6c:	21 96       	adiw	r28, 0x01	; 1
 			color_ant=0;
 		}
 	} else {
 		
 		// Recorremos los 8 LEDs de la tira (del 0 al 7)
 		for (uint8_t i = 0; i < 8; i++) {
-    1a78:	8f 5f       	subi	r24, 0xFF	; 255
-    1a7a:	01 c0       	rjmp	.+2      	; 0x1a7e <__stack+0x117f>
-    1a7c:	80 e0       	ldi	r24, 0x00	; 0
-    1a7e:	88 30       	cpi	r24, 0x08	; 8
-    1a80:	08 f4       	brcc	.+2      	; 0x1a84 <__stack+0x1185>
-    1a82:	ce cb       	rjmp	.-2148   	; 0x1220 <__stack+0x921>
+ f6e:	c8 30       	cpi	r28, 0x08	; 8
+ f70:	d1 05       	cpc	r29, r1
+ f72:	09 f0       	breq	.+2      	; 0xf76 <ejecutar_secuencias_NEO+0x3e8>
+ f74:	3f ce       	rjmp	.-898    	; 0xbf4 <ejecutar_secuencias_NEO+0x66>
 				mandar_vacio(); // Si no, lo manda apagado
 			}
 		}
 		
 		// Actualizamos la posición para la próxima vuelta (de derecha a izquierda)
 		pos_verde--;
-    1a84:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
-    1a88:	81 50       	subi	r24, 0x01	; 1
-    1a8a:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
+ f76:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ f7a:	81 50       	subi	r24, 0x01	; 1
 		// Si se pasó del primer LED, vuelve a arrancar desde la derecha
 		if (pos_verde < 0) {
-    1a8e:	88 23       	and	r24, r24
-    1a90:	1c f4       	brge	.+6      	; 0x1a98 <__stack+0x1199>
+ f7c:	87 fd       	sbrc	r24, 7
 			pos_verde = 7;
-    1a92:	87 e0       	ldi	r24, 0x07	; 7
-    1a94:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
-    1a98:	08 95       	ret
+ f7e:	87 e0       	ldi	r24, 0x07	; 7
+ f80:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
+		}	
+	}
+}
+ f84:	df 91       	pop	r29
+ f86:	cf 91       	pop	r28
+ f88:	08 95       	ret
 
-00001a9a <main>:
+00000f8a <main>:
 uint8_t color_ant= 0;		// 1 rojo , 0 azul
 int8_t pos_verde = 7;
 
 
 int main(void) {
     configurar_io();
-    1a9a:	0e 94 92 02 	call	0x524	; 0x524 <configurar_io>
+ f8a:	0e 94 66 05 	call	0xacc	; 0xacc <configurar_io>
     uint8_t contA = 1;
     uint8_t contB = 1;
-    1a9e:	d1 e0       	ldi	r29, 0x01	; 1
+ f8e:	d1 e0       	ldi	r29, 0x01	; 1
 int8_t pos_verde = 7;
 
 
 int main(void) {
     configurar_io();
     uint8_t contA = 1;
-    1aa0:	c1 e0       	ldi	r28, 0x01	; 1
+ f90:	c1 e0       	ldi	r28, 0x01	; 1
     uint8_t contB = 1;
 
     while(1) {
         leer_pulsadores();
-    1aa2:	0e 94 9e 02 	call	0x53c	; 0x53c <leer_pulsadores>
+ f92:	0e 94 70 05 	call	0xae0	; 0xae0 <leer_pulsadores>
 
-        // Tarea Puerto D (Cada 100ms) -> 10 ticks de 10ms
+        // Puerto D (Cada 100ms)
         if (contA == 10) {
-    1aa6:	ca 30       	cpi	r28, 0x0A	; 10
-    1aa8:	21 f4       	brne	.+8      	; 0x1ab2 <main+0x18>
+ f96:	ca 30       	cpi	r28, 0x0A	; 10
+ f98:	21 f4       	brne	.+8      	; 0xfa2 <main+0x18>
             ejecutar_secuencias_D();
-    1aaa:	0e 94 d1 02 	call	0x5a2	; 0x5a2 <ejecutar_secuencias_D>
+ f9a:	0e 94 9f 05 	call	0xb3e	; 0xb3e <ejecutar_secuencias_D>
             contA = 1;
-    1aae:	c1 e0       	ldi	r28, 0x01	; 1
-    1ab0:	01 c0       	rjmp	.+2      	; 0x1ab4 <main+0x1a>
+ f9e:	c1 e0       	ldi	r28, 0x01	; 1
+ fa0:	01 c0       	rjmp	.+2      	; 0xfa4 <main+0x1a>
         } else {
             contA++;
-    1ab2:	cf 5f       	subi	r28, 0xFF	; 255
+ fa2:	cf 5f       	subi	r28, 0xFF	; 255
         }
 
-        // Tarea Neopixel (Cada 150ms) -> 15 ticks de 10ms
+        // Neopixel (Cada 150ms)
         if (contB == 15) {
-    1ab4:	df 30       	cpi	r29, 0x0F	; 15
-    1ab6:	21 f4       	brne	.+8      	; 0x1ac0 <main+0x26>
+ fa4:	df 30       	cpi	r29, 0x0F	; 15
+ fa6:	21 f4       	brne	.+8      	; 0xfb0 <main+0x26>
 			ejecutar_secuencias_NEO();
-    1ab8:	0e 94 fc 02 	call	0x5f8	; 0x5f8 <ejecutar_secuencias_NEO>
+ fa8:	0e 94 c7 05 	call	0xb8e	; 0xb8e <ejecutar_secuencias_NEO>
             contB = 1;
-    1abc:	d1 e0       	ldi	r29, 0x01	; 1
-    1abe:	01 c0       	rjmp	.+2      	; 0x1ac2 <main+0x28>
+ fac:	d1 e0       	ldi	r29, 0x01	; 1
+ fae:	01 c0       	rjmp	.+2      	; 0xfb2 <main+0x28>
         } else {
             contB++;
-    1ac0:	df 5f       	subi	r29, 0xFF	; 255
+ fb0:	df 5f       	subi	r29, 0xFF	; 255
 	#else
 		//round up by default
 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 	#endif
 
 	__builtin_avr_delay_cycles(__ticks_dc);
-    1ac2:	8f e3       	ldi	r24, 0x3F	; 63
-    1ac4:	9c e9       	ldi	r25, 0x9C	; 156
-    1ac6:	01 97       	sbiw	r24, 0x01	; 1
-    1ac8:	f1 f7       	brne	.-4      	; 0x1ac6 <main+0x2c>
-    1aca:	00 c0       	rjmp	.+0      	; 0x1acc <main+0x32>
-    1acc:	00 00       	nop
-    1ace:	e9 cf       	rjmp	.-46     	; 0x1aa2 <main+0x8>
+ fb2:	8f e3       	ldi	r24, 0x3F	; 63
+ fb4:	9c e9       	ldi	r25, 0x9C	; 156
+ fb6:	01 97       	sbiw	r24, 0x01	; 1
+ fb8:	f1 f7       	brne	.-4      	; 0xfb6 <main+0x2c>
+ fba:	00 c0       	rjmp	.+0      	; 0xfbc <main+0x32>
+ fbc:	00 00       	nop
+ fbe:	e9 cf       	rjmp	.-46     	; 0xf92 <main+0x8>
 
-00001ad0 <_exit>:
-    1ad0:	f8 94       	cli
+00000fc0 <_exit>:
+ fc0:	f8 94       	cli
 
-00001ad2 <__stop_program>:
-    1ad2:	ff cf       	rjmp	.-2      	; 0x1ad2 <__stop_program>
+00000fc2 <__stop_program>:
+ fc2:	ff cf       	rjmp	.-2      	; 0xfc2 <__stop_program>
